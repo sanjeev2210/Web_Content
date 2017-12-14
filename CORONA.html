@@ -1,0 +1,3211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://corona.nitp.ac.in/Corona16/index.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="CORONA NITP">
+	<meta name="keywords" content="CORONA,NITP,corona"> 
+	<meta name="author" content="SAURAV SHANU , MAYANK RAJ"> 
+		
+        <link rel="stylesheet" type="text/css" href="./CORONA_files/index.css">
+        <link rel="icon" type="image" href="./CORONA_files/logoclear.png">
+        <script src="./CORONA_files/jquery.min.js"></script>
+        <!--<script src="js/jquery-1.10.2.min.js"></script>-->
+        <script src="./CORONA_files/index.js"></script>
+        <script src="./CORONA_files/menu.js"></script>
+        <script>
+            function loginb(){
+                var data_send={ 
+                            log:'login'
+                        };
+                    $.post("./php/islogged.php",
+                        data_send,function(data_recieve)
+                        {
+                            if(data_recieve==1)
+                                {
+                                    $("#black").fadeIn(300);
+                                    $(".new_wind").hide();
+                                    $("#profile").css({"background-size":"1224px 592px"});
+                                    $("#profile").animate({top:"40px",left:"60px",width:"1000px",height:"508px"},300);
+                                    $("#profile").show();
+                                    $("#profile").load("./php/profile.php");
+                                    $("#close_wind").show();
+                                    $("#close_wind").css({"top":"80px","left":"1200px"});
+                                }
+                            else{
+                                    $("#black").fadeIn(300);
+                                    $("#login").css({"left":"1100px","top":"120px"});
+                                    $("#login").animate({top:"128px",left:"297px",width:"525px",height:"352px"},300);
+                                    $("#login").show();
+                                    $("#close_wind").delay(300).fadeIn();
+                                }
+                        }
+                        );     
+                        }
+        </script>
+        <title>CORONA</title>
+    </head>
+    <body>
+        <audio id="laser">
+        <source src="./audio/laser.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+        <div id="main" onmousemove="rotateArc(event)" style="">
+            <div id="banner" class="shine" style="display: block;">
+                    <img id="spark1" src="./CORONA_files/spark.png" alt="" style="left: 10px;">
+                    <img id="spark2" src="./CORONA_files/spark.png" alt="" style="left: 1214px;">
+                <div id="coro_logo" style="display: block;">
+                    <img src="./CORONA_files/logoclear.png" alt="corona">
+                </div>
+                <div id="name_ban">
+                    
+                CORONA 2016</div>
+                <div id="inst_logo" style="display: block;">
+                    <a href="http://nitp.ac.in/" target="_blank"><img src="./CORONA_files/nitlogo.png" alt="nitp"></a>
+                </div>
+            </div>
+            <div id="hmenu">
+                
+        <ul id="menu_option" style="display: block;">
+            <li id="menu_event">Events</li>
+            <li id="menu_sponsor">Sponsors</li>
+            <!--<li id="menu_work">Workshops</li>
+            <li id="menu_guest">Guest Talks</li>-->
+            <li id="menu_attract">Main Attraction</li>
+            <li id="menu_contact">Contact Us</li>
+        </ul>
+<ul id="menu_icon" style="display: block;">
+            <li id="homeb"><img src="./CORONA_files/home.png" alt="home" title="home"></li>
+          <!--  <li id="loginb" onclick="loginb()"><img src="./images/key.png" alt="signin" title="signin"/></li>
+            <li id="signupb"><img src="./images/man.png" alt="signup" title="signup"/></li>
+			-->
+</ul>            </div>
+           <div id="mid">
+               <div id="mark1" style="top: 0px; left: -5464px;">
+               <div class="slidepane" id="events">
+               <div id="menu"> 
+               <ul id="m_menu">
+                    <li id="tab_aayam">Aayam</li>
+                    <li id="tab_byte">Byte World</li>
+                    <li id="tab_concreate">Concreate</li>
+                    <li id="tab_ohm">Ohm</li>
+                    <li id="tab_robotics">Robotics</li>
+                    <li id="tab_yantriki">Yantriki</li>                    
+                </ul>
+               </div>
+               <div id="circuit" style="display: block;">
+                   <img src="./CORONA_files/circuit.png">
+               </div>
+                <div id="arc_sh" style="left: 239px;"></div>
+                <div id="arc" class="enter" style="cursor: pointer; left: 239px;">
+                    <img src="./CORONA_files/arc.png" alt="loading" style="transform: rotate(718deg);">
+                </div>
+                <div id="enter" class="enter" style="display: none;">
+                    Enter Website
+                </div>
+                <div id="home_space">
+                    <div id="home_content" style="display: none;">
+                        <div id="socialicons">
+                            <ul>
+                               <a href="https://www.facebook.com/coronamelange16" target="_blank"><li><img src="./CORONA_files/facebook.png" alt="fb"></li></a>
+                               <a href="https://plus.google.com/108265404321921322911" target="_blank"><li><img src="./CORONA_files/google.png" alt="g+"></li></a>
+                                <a href="https://www.youtube.com/channel/UC2Yfu8Y_MhW_AA6w8Kwy3Sw" target="_blank"><li><img src="./CORONA_files/youtube.png" alt="yt"></li></a>
+                            </ul>
+                        </div>
+                        <h1>Annual Technical Festival of NIT Patna</h1>
+                        <div id="event_date">22-27 January, 2016 ...</div>
+                        <div id="tagline">Unleash the Techno Maniac</div>
+                        <div id="notice_pan" style="top: 119px; left: -158px; width: 421px; height: 205px; transform: rotate(0deg); display: block;">
+                            <ul>
+                                <!--li><a href="downloads/photography.txt" target="_blank" style="color:#a4cefd">Click here</a> to download details of the photography event "NIT PIXEL"</li>
+                                <li>Prizes worth ₹6000/- to be won in every event.</li>
+                                <li>Hackerzilla is on air.<a href="http://hackerzilla.nitp.ac.in" target="_blank" style="color:#a4cefd">Click to play.</a></li-->
+                      <li><a href="http://corona.nitp.ac.in/Corona16/downloads/Schedule.pdf" target="_blank" style="color:#a4cefd">Click here to download schedule of CORONA'16</a></li>
+                                <!--li>Abstract submission dates changed for contrivia and open hardware</li-->
+                                <li>Registration for Corona 2016 has been started. Please contact Corona Desk.</li>  
+                                                           
+								 
+                            </ul>                            
+                        </div>
+                        <div id="notice_lab" style="top: 131px; left: -91px; transform: rotate(0deg);">NOTIFICATIONS</div>
+                    </div>
+                <div id="circuitinverse" style="display: block;">
+                   <img src="./CORONA_files/circuit.png">
+               </div>
+                <div class="eventdetail" id="event_aayam" style="display: none; top: 0px;">
+                    
+        <ul id="vmenu">
+            <li id="desarteco">LANDSCAPE DESIGN</li>
+            <li id="growing">MAIN DESIGN</li>
+            <li id="waste">BEST OUT OF WASTE</li>
+            <li id="etart">PHOTOGRAPHY</li>
+            <li id="expo">ART EXPO</li>
+        </ul>
+        <div id="php_desarteco" class="aayampallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#desartecorules").show();
+                //$("#menudesartecointro").click(function(){
+                //    $(".aboutevent").hide();
+                //    $("#desartecointro").show();
+                // });
+                $("#menudesartecorules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#desartecorules").show();
+                });
+                $("#menudesartecoprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#desartecoprize").show();
+                });
+                $("#menudesartecocontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#desartecocontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul style="margin-left: -80px;">
+                <!--<li id="menudesartecointro">Introduction</li>-->
+                <li id="menudesartecorules">Event Details</li>
+                <li id="menudesartecoprize">Prizes</li>
+                <li id="menudesartecocontact">Contact</li>
+            </ul>
+        </div>
+        <!--<div class="aboutevent" id="desartecointro">
+            <center>Good design is making something intelligible and memorable, Great design is making something memorable
+                and meaningful.  </center>
+
+            <center>– Dieter Rams</center>  
+
+            Desarteco, as name suggests, is an approach to design a given space with special consideration of its
+            environmental impacts along with art and aesthetics. It is imperative to search for new building solutions that
+            are environment friendly and lead to reduction in the consumption of materials and energy.
+        </div>-->
+        <div class="aboutevent" id="desartecorules" style="display: none;">
+           
+		   <p>
+		   
+		  <strong> Description:</strong><br>
+Landscape is an integral part of sustainable development as it blends man’s technology into the natural surroundings. It plays an important role in the preservation, improvement and enhancement of environment.
+So, all you need to do is to design an efficient, pleasing and sustainable surrounding with a concept which fulfills the given Design Statement. 
+
+<strong>Participants:</strong> 3 members per team
+<br>
+<strong>Venue :</strong> Common Room 2-6
+<br> <br>
+<strong>Rules &amp; Regulations:</strong>
+</p><ul>	
+<li>	All essential materials will be provided to each team.</li>
+<li>	Participants may bring their own accessories (steadlers, marker, rotring, etc).</li>
+<li>	Use of digital tools/media is not permitted and disobeying the same may lead to cancellation of participation.</li>
+<li>	Late submission will not be entertained.</li>
+</ul>
+<p></p>		   		          </div>
+        <div class="aboutevent" id="desartecoprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="desartecocontact" style="display: none;">
+           For any query contact
+		   <ul>
+		  <li>UMANG BANDOONI (COORDINATOR) 		+91-9013038729</li>
+<li>SHAIL PRATAP SINGH (CO-COORDINATOR)	+91-8292088392</li>
+<li>	SHIVAM RASTOGI (CO-COORDINATOR)	+91-7549777450</li>
+
+		   
+		   </ul>
+        </div>
+    
+
+        </div>
+        <div id="php_growing" class="aayampallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#growingrules").show();
+                //$("#menugrowingintro").click(function(){
+                //    $(".aboutevent").hide();
+                //    $("#growingintro").show();
+                //});
+                $("#menugrowingrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#growingrules").show();
+                });
+                $("#menugrowingprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#growingprize").show();
+                });
+                $("#menugrowingcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#growingcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul style="margin-left: -80px;">
+                <!--<li id="menugrowingintro">Introduction</li>-->
+                <li id="menugrowingrules">Event Details</li>
+                <li id="menugrowingprize">Prizes</li>
+                <li id="menugrowingcontact">Contact</li>
+            </ul>
+        </div>
+        <!--<div class="aboutevent" id="growingintro">
+            <center>Simplicity and repose are the quality that measures the true value of any work of art.</center>
+
+            <center>– F.L.Wright</center>  
+
+            To design a community which simplifies lives by sharing resources and minimizing impact upon the environment .
+            Residents from a wide range of ethnic background and social classes will come together to live and play in a 
+            harmony .The design will promote sense of place and community by providing many opportunities to interact with
+            other residents from within and outside of the community.<br>
+            You have to give a dynamic and life supporting landscape through policy, design, education, 
+            ecological processes and incremental change, which is most compatible and valuable to achieving
+            a balance between human and natural communities.
+        </div>-->
+        <div class="aboutevent" id="growingrules" style="display: none;">
+		
+		 <p>
+		   
+		  <strong> Description:</strong><br>
+Design is the process or formulating, creating and planning a functional, graphic or mass produced object such as a building.
+Thus, expected solution to the Design Problem could be in the form of floor plans, elevations, sections, views, etc. supported with proper concept. 
+
+<strong>Participants:</strong> 3 members per team
+<br>
+<strong>Venue :</strong> Common Room 2-6
+<br> <br>
+<strong>Rules &amp; Regulations:</strong>
+</p><ul>	
+<li>	All essential materials will be provided to each team.</li>
+<li>	Participants may bring their own accessories like T-square, drafters, colors, etc.</li>
+<li>	Use of digital tools/media is not permitted and disobeying the same may lead to cancellation of participation.</li>
+<li>	Late submission will not be entertained.</li>
+</ul>
+<p></p>	
+            
+        </div>
+        <div class="aboutevent" id="growingprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="growingcontact" style="display: none;">
+           
+		    For any query contact
+		   <ul>
+		  <li>UMANG BANDOONI (COORDINATOR) 		+91-9013038729</li>
+<li>SHAIL PRATAP SINGH (CO-COORDINATOR)	+91-8292088392</li>
+<li>	SHIVAM RASTOGI (CO-COORDINATOR)	+91-7549777450</li>
+
+		   
+		   </ul>
+		   
+        </div>
+    
+
+        </div>
+        <div id="php_waste" class="aayampallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#wasteintro").show();
+                $("#menuwasteintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#wasteintro").show();
+                });
+                $("#menuwasterules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#wasterules").show();
+                });
+                $("#menuwasteprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#wasteprize").show();
+                });
+                $("#menuwastecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#wastecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuwasteintro">Introduction</li>
+                <li id="menuwasterules">Event Details</li>
+                <li id="menuwasteprize">Prizes</li>
+                <li id="menuwastecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="wasteintro" style="display: none;">
+            The objective is to design a usable object out of waste materials i.e. to create best out of waste in 2-3 hours, 
+            whether the material have been provided to it at the spot. The team has to demonstrate the usability of the product
+            along with the concept/idea at the time of judgment. 
+        </div>
+        <div class="aboutevent" id="wasterules" style="display: none;">
+            
+			 <p>
+		   
+		  <strong> Description:</strong><br>
+Nothing is really waste unless it is intentionally rejected. Waste can be arranged in a creative way to make something meaningful and magnificent out of it.
+Thus, the event is totally based on theme to be given at the start of event. A good concept of the same is also expected.
+
+
+<br>
+<strong>Participants:</strong> 3 members per team
+<br>
+<strong>Venue :</strong> Common Room 2-6
+<br> <br>
+<strong>Rules &amp; Regulations:</strong>
+</p><ul>	
+<li>	All essential materials will be provided to each team.</li>
+<li> Participants have to make use of use only provided materials and use of external materials will not be allowed.</li>
+<li> Product should be totally based on given theme supported with concept paper.</li>
+</ul>
+<p></p>	
+			
+			
+			
+			
+        </div>
+        <div class="aboutevent" id="wasteprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="wastecontact" style="display: none;">
+             For any query contact
+		   <ul>
+		  <li>UMANG BANDOONI (COORDINATOR) 		+91-9013038729</li>
+<li>SHAIL PRATAP SINGH (CO-COORDINATOR)	+91-8292088392</li>
+<li>	SHIVAM RASTOGI (CO-COORDINATOR)	+91-7549777450</li>
+
+		   
+		   </ul>
+        </div>
+    
+
+        </div>
+        <div id="php_etart" class="aayampallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#etartrules").show();
+                
+                $("#menuetartrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#etartrules").show();
+                });
+                $("#menuetartprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#etartprize").show();
+                });
+                $("#menuetartcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#etartcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul style="margin-left:-80px;">
+                <!--<li id="menuetartintro">Introduction</li>-->
+                <li id="menuetartrules">Event Details</li>
+                <li id="menuetartprize">Prizes</li>
+                <li id="menuetartcontact">Contact</li>
+            </ul>
+        </div>
+        <!--<div class="aboutevent" id="etartintro">
+            <center>DISCOVER AN ARTIST WITHIN YOU</center>
+            Art is a diverse range of human activities and the products of those activities. You have to visualize the moments 
+            happening around you and give your best of it. This describes  your vision and your power of visualization. 
+        </div>-->
+        <div class="aboutevent" id="etartrules" style="display: none;">
+            
+			<p>
+		   
+		  <strong> Description:</strong><br>
+Photography in simple words is the production of images using a camera followed by an image-developing process. 
+This event will also be theme based and judgement will be totally based on presentation and inter-relation between the pictures and the given theme.
+<br><br>
+<strong>Participants:</strong> individual and open for all.
+<br>
+<strong>Venue :</strong> Architecture Department, Seminar Room
+<br> <br>
+<strong>Rules &amp; Regulations:</strong>
+</p><ul>	
+<li>	Picture should be taken within the campus.</li>
+<li>	Picture taken should follow the given theme.</li>
+<li>	Presentation time should not exceed 3 minutes.</li>
+<li>	Late submission will not be entertained.</li>
+</ul>
+<p></p>
+			
+				
+        </div>
+        <div class="aboutevent" id="etartprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="etartcontact" style="display: none;">
+            For any query contact
+		   <ul>
+		  <li>UMANG BANDOONI (COORDINATOR) 		+91-9013038729</li>
+<li>SHAIL PRATAP SINGH (CO-COORDINATOR)	+91-8292088392</li>
+<li>	SHIVAM RASTOGI (CO-COORDINATOR)	+91-7549777450</li>
+        </ul></div>
+    
+
+        </div>
+        
+        <div id="php_expo" class="aayampallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#expointro").show();
+                $("#menuexpointro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#expointro").show();
+                });
+                $("#menuexporules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#exporules").show();
+                });
+                $("#menuexpoprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#expoprize").show();
+                });
+                $("#menuexpocontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#expocontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuexpointro">Introduction</li>
+                <li id="menuexporules">Event Details</li>
+                <li id="menuexpoprize">Prizes</li>
+                <li id="menuexpocontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="expointro" style="display: none;">
+            <center>“Art is a poem without words” -Horace</center>
+            Art expo is a platform to sustain the artistic aspiration of NITP with the opportunity it deserves. 
+            Every year at corona, hundreds of innovative students showcase their artwork, sketches, collage, paintings, models,
+            all under one roof at Department of Architecture, NIT Patna.
+        </div>
+        <div class="aboutevent" id="exporules" style="display: none;">
+            
+			<strong>Description:</strong><br>
+Art expo is a place to showcase all the artistic talents and be judged on your talent. It exhibits fall types of art work – sketching, painting, caricature, craft work, digital drawings and photography.
+<br>
+<strong>Participants:</strong> Open for all
+<br>
+<strong>NOTE:<strong><i> submit any of your craft work, sketching, painting, 	photography, etc. before 22/01/2016 to AAYAM team.</i>
+
+			
+			
+			
+        </strong></strong></div><strong><strong>
+        <div class="aboutevent" id="expoprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="expocontact" style="display: none;">
+                For any query contact
+		   <ul>
+		  <li>UMANG BANDOONI (COORDINATOR) 		+91-9013038729</li>
+<li>SHAIL PRATAP SINGH (CO-COORDINATOR)	+91-8292088392</li>
+<li>	SHIVAM RASTOGI (CO-COORDINATOR)	+91-7549777450</li>
+        </ul></div>
+    
+
+        </strong></strong></div><strong><strong>                </strong></strong></div><strong><strong>
+                <div class="eventdetail" id="event_byte" style="display: none; top: 0px;">
+                    
+        <ul id="vmenu">
+            <li id="algozripper">Algo-z-Ripper</li>
+            <li id="webweaver">Web Weaver</li>
+            <li id="junkie">Virtual Junkie</li>
+            <li id="panorama">Panorama</li>
+           <!-- <li id="hackerzilla">Hackerzilla</li> -->
+        </ul>
+        <div id="php_algo" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#algointro").show();
+                $("#menualgointro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#algointro").show();
+                });
+                $("#menualgorules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#algorules").show();
+                });
+                $("#menualgoprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#algoprize").show();
+                });
+                $("#menualgocontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#algocontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menualgointro">Introduction</li>
+                <li id="menualgorules">Rules $ Regulations</li>
+                <li id="menualgoprize">Prizes</li>
+                <li id="menualgocontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="algointro" style="display: none;">
+            “Learning a programming language is like learning any other spoken language. It’s not about how to speak but what to 
+            speak that really counts”<br>
+            Do you turn coffee into code? Do you feel the root is always at the top of the tree? Do you start counting from zero
+            instead of one? Do you realize the true value of a semicolon? Algo-Z-Ripper gives you the opportunity to show off 
+            your skills in the coding arena. If you can think it, you can code it.  
+        </div>
+        <div class="aboutevent" id="algorules" style="display: none;">
+            Algo-Z-Ripper consists of two rounds.<br>
+            <h3><b>Round 1</b></h3>
+            Round 1 comprises of a pen and paper round which would consist of 3 sections. Participants can form a team of 
+            maximum 2 people to appear for the test. <br>
+            <ul>
+                <li>First section: Multiple choice questions on C.</li>
+                <li>Second section: Multiple choice questions on C++/Java. You have to attempt any one of these.</li>
+                <li>Third section: General algorithms and computational techniques.</li>
+            </ul>
+            <h3><b>Round 2</b></h3>
+            A limited number of teams will be selected for the second round based on the performance in the first round. Second round shall be an onsite coding contest in which each team will have three participants. Each team will be given a certain amount of questions which have to be solved in a limited time. Each question will have a sample test case but your submission will be tested against more rigorous test cases. Partial marks will be awarded for correct test cases. The allowed languages are C/C++/Java. You will read the input from standard input and the result shall be displayed on standard output.
+            The team which solves maximum questions in minimum time wins the contest.  
+
+        </div>
+        <div class="aboutevent" id="algoprize" style="display: none;">
+            To be updated soon
+        </div>
+        <div class="aboutevent" id="algocontact" style="display: none;">
+            For any queries contact:<br>
+			Abhishek Prakash (Event Coordinator): 9472050873<br>
+            Ranjan Kumar (Event Co-coordinator): 9386947664			
+		</div>
+    
+
+        </div>
+        <div id="php_web" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#webintro").show();
+                $("#menuwebintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#webintro").show();
+                });
+                $("#menuwebrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#webrules").show();
+                });
+                $("#menuwebprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#webprize").show();
+                });
+                $("#menuwebcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#webcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuwebintro">Introduction</li>
+                <li id="menuwebrules">Rules $ Regulations</li>
+                <li id="menuwebprize">Prizes</li>
+                <li id="menuwebcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="webintro" style="display: none;">
+            <center>“Design is intelligence made visible”</center>
+            <center>-Alina Wheeler</center><br>
+Can you design cool websites? Web Weaver provides you the opportunity to showcase your designing knowledge and your ability to
+make a useful website. Take up the challenge to drive home your genuine ideas and understanding. Who knows this could be your 
+first step to fame and glory!!!
+
+        </div>
+        <div class="aboutevent" id="webrules" style="display: none;">
+            Web Weaver consists of two rounds.<br>
+            <h3>Round 1:</h3>
+A pen and paper round which will test the consistency of the participants in web scripting and designing languages: HTML, CSS 
+and JavaScript/jQuery. You can form a team of maximum two members.<br>
+<h3>Round 2:</h3>
+A few teams will be shortlisted for the final round based on the performance in the first round. This will be an on-site round.
+You will be given a problem statement for which you have to design a website. Your work will be judged against various criteria
+e.g. design, responsiveness, effectiveness etc. This round will be held in a team of three. The procedure for team formation 
+will be informed in the second round itself
+
+        </div>
+        <div class="aboutevent" id="webprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="webcontact" style="display: none;">
+           For any queries contact:<br>
+			Abhishek Prakash (Event Coordinator): 9472050873<br>
+            Ranjan Kumar (Event Co-coordinator): 9386947664	
+        </div>
+    
+
+        </div>
+        <div id="php_junkie" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#junkieintro").show();
+                $("#menujunkieintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#junkieintro").show();
+                });
+                $("#menujunkierules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#junkierules").show();
+                });
+                $("#menujunkieprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#junkieprize").show();
+                });
+                $("#menujunkiecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#junkiecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menujunkieintro">Introduction</li>
+                <li id="menujunkierules">Rules $ Regulations</li>
+                <li id="menujunkieprize">Prizes</li>
+                <li id="menujunkiecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="junkieintro" style="display: none;">
+            <center>“You don’t stop gaming because you grow old; you grow old because you stop gaming.”</center>
+Do you remember the line “Thank you! But our princess is in another castle!” Do you live many lives instead of one? Keep in mind 
+whatever doesn’t kill you simply gives you XP.  You know this enigmatic feeling when you complete the game; you were engrossed 
+in for few weeks. You know this adrenaline rush when you get a sudden blow. Do you feel that you are the epitome of a gamer? Are
+you so dauntless that you are not intimidated by anyone? Do you get hurt when people say that gaming is a hobby because you know
+it’s more than that? It’s a cult. Your eyes widen seeing a new game release. <br>
+I know a place just right for you and gamers know the secret of getting ahead is getting started.
+
+        </div>
+        <div class="aboutevent" id="junkierules" style="display: none;">
+            This is three day event held at CORONA and includes games of First person shooting, strategy, and virtual sports. Teams and individuals are invited to compete with each other and win the title of stalwart gamer along with the prize money. So be ready to give an eye for an eye.
+            <center>“LET THE GAMES BEGIN”- Bane</center>
+
+        </div>
+        <div class="aboutevent" id="junkieprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="junkiecontact" style="display: none;">
+           
+             For any queries contact:<br>
+			Abhishek Prakash (Event Coordinator): 9472050873<br>
+            Apurv Sarvesh Pandey (Event Co-coordinator): 7739966817
+        </div>
+    
+
+        </div>
+        <div id="php_panorama" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#panoramaintro").show();
+                $("#menupanoramaintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#panoramaintro").show();
+                });
+                $("#menupanoramarules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#panoramarules").show();
+                });
+                $("#menupanoramaprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#panoramaprize").show();
+                });
+                $("#menupanoramacontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#panoramacontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menupanoramaintro">Introduction</li>
+                <li id="menupanoramarules">Rules $ Regulations</li>
+                <li id="menupanoramaprize">Prizes</li>
+                <li id="menupanoramacontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="panoramaintro" style="display: none;">
+            <center>"The creative person is willing to live with ambiguity. He doesn’t need problems solved immediately and can
+                afford to wait for the right ideas."</center>
+            <center>— Abe Tannenbaum</center>
+
+For all those tech savvy folks brimming with ideas, bubbling with confidence and having the right acumen, your wait for the
+right opportunity to present your ideas to your fellow tech community is finally over. The stage is all yours! Come up with
+a spark of innovation to improve the lives around you by fuelling your brain to ideate the ideas that never existed!! 
+
+ </div>
+        <div class="aboutevent" id="panoramarules" style="display: none;">
+            Participants can participate in a group of maximum 2 students per team. This event unfolds in 3 rounds.<br>
+            The proposed topics of paper presentation will be updated soon.
+            Apart from the proposed topics, you are encouraged to choose any topic of your liking.<br> 
+            Last date for abstract submission is 21st Jan, 2016.
+            You have to mail your abstract to the e-mail id`s:<br> 
+            apurv135068@nitp.ac.in .
+            <h3>ROUND 1:</h3>
+            This is the ‘Abstract Submission’ round. The teams are required to submit a brief summary of their chosen topic in
+            pdf or doc format, not exceeding 250 words. A limited number of abstracts will be selected for presentation in the
+            final round. A fixed number of teams from the first year will be selected for the grooming round.
+
+            <h3>ROUND 2:  (Grooming round)</h3>
+            We call this the “Beginner`s Luck” round. All the selected first year teams will be provided a grooming session
+            after which, they will be asked to give the presentation. A fixed number of first year teams will move to the 
+            final round.<br>
+            NOTE: This round is only for the teams from first year. The teams selected from second year onward in the first
+            round will directly go to the final round although you are more than welcome to attend the grooming session.
+
+            <h3>FINAL ROUND</h3>
+           This is the ‘Presentation Round’. The selected teams will be given a maximum of 7 minutes to present their paper to 
+           the jury and the audience. You will be judged on various criteria such as the content, presentation, body-language 
+           and your answers to questions, which will be put up by the jury as well as the audience. The team with the maximum 
+           points will be the winner.
+            <br><br>
+            The suggested topics for panorama are:
+            <br>
+            <ul>
+                <li>Mobile Jamming Device</li>
+                <li>Evolution of Android: Alpha (1.0) to Lollipop (5.0-5.0.2)</li>
+                <li>Anonymous Communication</li>
+                <li>Blue Brain</li>
+                <li>Raspberry Pi</li>
+                <li>Green Cloud</li>
+                <li>Evolution of Gaming Graphics</li>
+                <li>Phishing</li>
+                <li>Hadoop</li>
+                <li>Mind-Reading Computing</li>
+                <li>Intelligent RAM (iRAM)</li>
+                <li>Bluejacking</li>
+                <li>Chameleon Chip</li>
+                <li>IP Spoofing</li>
+                <li>Li-Fi</li>
+            </ul>
+            
+            Apart from these topics you are encouraged to choose topic of your own choice. 
+        </div>
+        <div class="aboutevent" id="panoramaprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="panoramacontact" style="display: none;">
+            For any queries contact:<br>
+			Abhishek Prakash (Event Coordinator): 9472050873<br>
+            Apurv Sarvesh Pandey (Event Co-coordinator): 7739966817
+        </div>
+    
+
+        </div>
+        <div id="php_hackerzilla" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#hackintro").show();
+                $("#menuhackintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hackintro").show();
+                });
+                $("#menuhackrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hackrules").show();
+                });
+                $("#menuhackprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hackprize").show();
+                });
+                $("#menuhackcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hackcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuhackintro">Introduction</li>
+                <li id="menuhackrules">Rules $ Regulations</li>
+                <li id="menuhackprize">Prizes</li>
+                <li id="menuhackcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="hackintro" style="display: none;">
+		<!--
+           <center>“No object is mysterious. The mystery is your eye.”</center>
+           <center>----- Elizabeth Brown</center>
+Does the mystery of the Bermuda triangle intrigue you? Have you always wanted to know the secret of the Pandora’s Box? Do you 
+have the technical Sherlock in you? Can you hack your way out through the levels in a plethora of stages which test you mental
+and analytical competence? Can you see what others have seen and think which nobody could? Can you see beyond the horizons of 
+your sight?<br>
+Hackerzilla is an event which allows you to sit back and relax on your couch and let the mental horses sprint. Do you have it
+in you to go all the way?<br>
+The laurels and the title of “Ultimate Hacker” of Corona ’16 await you.<br>
+Come, be part of the most celebrated and amazing hunt for glory.<br>
+-->
+
+To be updated soon...
+
+        </div>
+        <div class="aboutevent" id="hackrules" style="display: none;">
+		<!--
+            Hackerzilla is an online treasure hunt cum hacking simulator web based event which runs across a few days. At the 
+            end of the competition the player which completes all the levels first or the player who has reached the maximum 
+            level is deemed the winner.<br><br>
+            The link for the Hackerzilla website will be shared when the competition starts.<br><br> 
+            For hints and updates, like our fb page: <a href="http://www.facebook.com/hackerzilla15">fb.com/hackerzilla15</a>.<br>
+<a href="http://hackerzilla.nitp.ac.in" target="_blank" style="color:red">Play HackerZilla</a>  -->
+To be updated soon...
+
+        </div>
+        <div class="aboutevent" id="hackprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="hackcontact" style="display: none;">
+           <!-- For any queries contact:<br>
+            <a href="http://goo.gl/iCSCfv" target="_blank" style="color:#A4CEFD">Ankur Chandra</a>: 7209366866<br>
+            <a href="http://goo.gl/7MY0W5" target="_blank" style="color:#A4CEFD">Twinkle Rai</a>:  8877808819<br>
+            <a href="http://goo.gl/d8eo5U" target="_blank" style="color:#A4CEFD">Abhinav Yadav</a>:  7870779242<br> -->
+To be updated soon...			
+        </div>
+    
+
+        </div>
+
+                </div>
+                <div class="eventdetail" id="event_concreate" style="display: none; top: 0px;">
+                            <ul id="vmenu">
+            <li id="bob">Cerebro</li>
+            <li id="herald">Illubrico</li>
+            <li id="estate">Real Estate</li>
+            <li id="extreme">Cantilego</li>
+        </ul>
+        <div id="php_bob" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#bobintro").show();
+                $("#menubobintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#bobintro").show();
+                });
+                $("#menubobrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#bobrules").show();
+                });
+                $("#menubobprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#bobprize").show();
+                });
+                $("#menubobcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#bobcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menubobintro">Introduction</li>
+                <li id="menubobrules">Rules $ Regulations</li>
+                <li id="menubobprize">Prizes</li>
+                <li id="menubobcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="bobintro" style="display: none;">
+            Nor aught availed him now. <br>
+            To have built in heaven high tower<br> 
+            Nor did he scape <br>
+            By all his engines, but was headlong sent with is industrious crew to build in hell<br>
+            <center>-John Milton</center>  <br> 
+            Do you know about James Hoban? Any idea about byzantine architecture? If you have then chisel up your brains and
+            be poised to scale new heights at this geek show and prove you are a braniac. <br>
+            A mind-boggling event to test your intellect and sagacity. 
+        </div>
+        <div class="aboutevent" id="bobrules" style="display: none;">
+            Cerebro consists of 2 rounds. 
+            <h3>Round 1 (Prelims):</h3> 
+            Comprises of pen paper round which would consists of 3 sections <br>
+            First section: Logical reasoning <br>
+            Second section: Quants <br>
+            Third section: Multiple choice questions on civil engineering.<br>  
+            <h3>Round 2 (Final Round): </h3>
+            It will be a team round in which teams will be formed on spot.Each team will consists of 3 members. <br>
+            Final round will consists of 2 sub-rounds. <br>
+            <h3>Blue book Round:</h3> 
+            This is a round based on data based questions on civil engineering. 
+            <h3>Cognizance Round: </h3>
+            This will be an audio visual round consisting questions on primogeniture  
+            castles and wonder structures made. 
+            The team with maximum points wins the contest. 
+        </div>
+        <div class="aboutevent" id="bobprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="bobcontact" style="display: none;">
+            For any queries contact:<br><br>
+            Rajat Kumar Rai: 8102485627<br>
+            email- raikumarrajat@gmail.com<br><br>
+           Jawed Iqbal: 9199786538 <br>
+           
+			
+			 
+        </div>
+    
+
+        </div>
+        <div id="php_herald" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#heraldintro").show();
+                $("#menuheraldintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#heraldintro").show();
+                });
+                $("#menuheraldrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#heraldrules").show();
+                });
+                $("#menuheraldprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#heraldprize").show();
+                });
+                $("#menuheraldcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#heraldcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuheraldintro">Introduction</li>
+                <li id="menuheraldrules">Rules $ Regulations</li>
+                <li id="menuheraldprize">Prizes</li>
+                <li id="menuheraldcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="heraldintro" style="display: none;">
+            Under the aegis of corona-16 this event beseech to treffen the revamp technic as done by john smeaton. <br><br>
+            This event  gives you a tribune to enlighten the human race in its entirety by by your experiments and path
+            breaking innovations. <br><br>
+            *All the lucubrates can send their abstract at saurabh134694@nitp.ac.in. 
+        </div>
+        <div class="aboutevent" id="heraldrules" style="display: none;">
+            <h3>Structure of team</h3> 
+            Maximum number of participants in the team will be two but a team can also have a single member.<br><br> 
+            This event will go through 2 rounds . 
+            <h3>FIRST ROUND</h3>  
+            All the interested participants can send their abstracts on the following topics.<br> 
+            <ol>
+                <li>Noise control of Building</li> 
+                <li>Earthquake Resistant Building Construction </li>
+                <li>Sky Scrapers </li>
+                <li>Green Building</li>
+                <li>Water Shed Management in concept and principles</li> 
+                <li>Nano Concrete </li>
+                <li>Significance of Nano-Technology in constructions </li>
+                <li>Disaster warning system </li>
+                <li>Stress Ribbon Bridge </li>
+                <li>Moving Bridge</li> 
+            </ol>
+            Other topics of interest can also be entertained.The last day of submission of abstract is 22 january 2016.<br>  
+            <h3>SECOND ROUND (EXPOSITION ROUND)</h3> 
+            All the selected after the first round have to give the presentation in front of deemers and the winner would be
+            decided. <br><br>
+            In this , maximum 10 minutes will be given to a team. Exceeding maximum time limit will invite negative marking.  
+        </div>
+        <div class="aboutevent" id="heraldprize" style="display: none;">
+           To be updated soon.
+        </div>
+        <div class="aboutevent" id="heraldcontact" style="display: none;">
+           For any queries contact:<br><br>
+            Saurabh Tiwari: 8405057842<br>
+           
+
+				
+        </div>
+    
+
+        </div>
+        <div id="php_estate" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#estateintro").show();
+                $("#menuestateintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#estateintro").show();
+                });
+                $("#menuestaterules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#estaterules").show();
+                });
+                $("#menuestateprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#estateprize").show();
+                });
+                $("#menuestatecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#estatecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuestateintro">Introduction</li>
+                <li id="menuestaterules">Rules $ Regulations</li>
+                <li id="menuestateprize">Prizes</li>
+                <li id="menuestatecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="estateintro" style="display: none;">
+            Here opens the door to the blitzkrieg to be won by creativity and cognizance along a           
+            challenge to come out with ideas and break the stereotypes.In the plethora of events under corona-16 this
+            event entreats you to brink forth new ideas and to show all your designing skills as if you were given to 
+            plan the city of zeus!!! 
+        </div>
+        <div class="aboutevent" id="estaterules" style="display: none;">
+            <h3>TOPICS</h3> 
+            <ul>
+                <li>Plan for smart city in Bihar(Muzzafarpur , Bihar-Sharif , Bhagalpur)</li>
+                <li>Plan for construction of NIT Patna Bihta Campus </li>
+                <li>SkyScraper Construction in Kolkata </li>
+            </ul>
+            The land area available for any of these plans is 750-1000 acres.The power plants should consist of all the
+            amenities. <br>
+            <h3>Rounds of Real-Estate </h3>
+            <h4>STRUCTURE OF TEAM</h4> 
+            Each team should consist of 4 members neither less nor more. <br>
+            <h4>E-tender Round (Round 1) </h4>
+            Each team will have to submit the tender form after  filling all the necessary details in the space provided.
+            All the teams can get the form by downloading it from corona-16 site.Each team will have one tender form and 
+            they will have to submit the form two days before the start of event.All tenders will be checked and verified
+            by professors and qualified team will be called for the next round.  
+            <h4>Astute Round (Round 2) </h4>
+            In this round teams are required to draw the basic layout of plan of the problem statement in front of the 
+            organizer in the space allotted for the organization of this event. <br>
+            Necessary articles will be provided at the spot like pencil,scale,eraser,sharpener etc.<br> 
+            *No colours are allowed in the sheet. <br>
+            *No other means like electronic gadgets will be allowed. <br>
+            Maximum time will be 3 hours and each team will have to give the project details,cost estimation and legal 
+            information on the A4 size page which will be provided at the spot. <br>
+            Selected students will be invited to the last round.  <br>
+            <h4>Elucidation Round (Round 3) </h4>
+            In this round all the qualified teams will be allowed to present their sheets in front of jury board
+            (Professor,HOD).Relevant questions will be asked about your project .So, each should have good knowledge 
+            about what you have drawn.  <br><br>
+            NOTE:- NO HIGH LEVEL ENGINEERING QUESTIONS WILL BE ASKED. SO, THERE WILL BE NO ISSUES FOR THE 1st AND 2nd YEAR STUDENTS. 
+            TAKE THE CHALLENGE!!! 
+            <br><br>
+            <a href="http://corona.nitp.ac.in/Corona16/downloads/etender.pdf" target="_blank">Click here</a> to download format for e-tender.
+        </div>
+        <div class="aboutevent" id="estateprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="estatecontact" style="display: none;">
+		 
+          For any queries contact:<br>
+            Raja Babu Adityan: 9905750812<br>
+           
+        </div>
+    
+
+        </div>
+        <div id="php_extreme" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#extremeintro").show();
+                $("#menuextremeintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#extremeintro").show();
+                });
+                $("#menuextremerules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#extremerules").show();
+                });
+                $("#menuextremeprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#extremeprize").show();
+                });
+                $("#menuextremecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#extremecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuextremeintro">Introduction</li>
+                <li id="menuextremerules">Rules $ Regulations</li>
+                <li id="menuextremeprize">Prizes</li>
+                <li id="menuextremecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="extremeintro" style="display: none;">
+            This extravaganza promises to envelope the wide diversities of civil engineering, a chance to present your ideas,
+            a platform to show all your design, a playpen to build these block again. In this bridge designing challenge , the 
+            inquisitive minds get a chance to explore their concepts providing a rationale to their learning.
+        </div>
+        <div class="aboutevent" id="extremerules" style="display: none;">
+            <ul>
+            <li>It is a team event, each team would comprise of maximum four members.</li>
+            <li>The problem statement would be provided on spot and the essentials will also be provided at the time.</li> 
+            <li>No external materials can be used and the structures made should be strictly according to the problem statement.</li>
+            <li>The made models should be as light as possible and should bear maximum load.  </li>
+            </ul>
+The result of the event will be announced after the testing of the respective models.
+
+        </div>
+        <div class="aboutevent" id="extremeprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="extremecontact" style="display: none;">
+          For any queries contact:<br>
+            Prashanth: 8271526813<br>
+            email- prashanthvv95@gmail.com
+			
+			
+        </div>
+    
+
+        </div>                </div>
+                <div class="eventdetail" id="event_ohm" style="display: block; top: 0px;">
+                            <ul id="vmenu">
+            <li id="contrivia">Contrivia</li>
+            <li id="smashdbug">Smash-d-bug</li>
+            <li id="electromaze">Electromaze</li>
+            <li id="open">Open Hardware</li>
+        </ul>
+        <div id="php_contrivia" class="eventpallete" style="display: block;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#contriviaintro").show();
+                $("#menucontriviaintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#contriviaintro").show();
+                });
+                $("#menucontriviarules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#contriviarules").show();
+                });
+                $("#menucontriviaprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#contriviaprize").show();
+                });
+                $("#menucontriviacontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#contriviacontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menucontriviaintro">Introduction</li>
+                <li id="menucontriviarules">Rules $ Regulations</li>
+                <li id="menucontriviaprize">Prizes</li>
+                <li id="menucontriviacontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="contriviaintro" style="display: block;">
+            <center>I am proud that I am not god gifted, for He knows that I have the potential, I don’t need a gift.</center>
+            <center>- anonymous</center>
+
+Paper presentation is a familiar word , a synonym to think beyond the frontiers. It invites you to explore your grey matter to
+bring in great ideas from the world of science. The stage is all set for you to bring your original ideas  present it on the 
+platform provided by OHM to unleash the change for mankind.<br>
+And thus the event Contrivia gives a perfect platform for technical innovation and imaginations bringing forth the new
+endeavours and advancements in the field of electrical, electronics and communications. And thus new passion for curious
+young kindling minds.
+        </div>
+        <div class="aboutevent" id="contriviarules" style="display: none;">
+            <h3>Topics</h3>
+            <ul>
+                <li>Hy-Wire</li>
+                <li>Hybrid Electric Vehicle</li>
+                <li>Intelligent Management of Electrical Systems in Industries</li>
+                <li>Hydrogen Super Highway</li>
+                <li>Magnetic Levitation</li>
+                <li>Electrical Impedance Tomography</li>
+                <li>Ultrasonic Motor</li>
+                <li>Prepaid energy meter using smart card</li>
+                <li>Energy Transmission System for Artificial Heart</li>
+                <li>Artificial Retina Using Thin-film Transistors Driven By Wireless Power Supply</li>
+                <li>Blue Eyes Technology - Human Operator Monitoring System</li>
+                <li>Under Water Acoustic Sensor Networks In Under Water Wireless Communication</li>
+                <li>Intelligent Traffic Light Control Using Embedded Systems</li>
+                <li>Vehicle-to-Grid V2G</li>
+                <li>Wireless Charging Of Mobile Phones Using Microwaves</li>
+            </ul>
+NOTE: Participants may also submit PPT on other topics related to electrical- electronics and communications.
+
+
+
+<h3>Rules</h3>
+<ul>
+<li>The competition is open to undergraduate students of all disciplines.</li>
+<li>No student can be an author of more than one participating paper.</li>
+<li>Each team may have maximum 2  members. All team members are not required to be enrolled at the same institution.</li>
+<li>All results will be announced on the website &amp; will be mailed to the team members of the successful teams.</li>
+</ul>
+
+<h3>Event Structure</h3>
+Round 1: Abstract Submission<br>
+<ul>
+<li>	An abstract of about 200-300 words has to be submitted focusing on the problem statement, scope of work, the idea 
+    proposed, original work done and brief results and findings.</li>
+<li>	The topic of the paper submitted can pertain to one of the tracks declared, if it does not, the participant should 
+    mention the topic unambiguously under the topic code 'others'.</li>
+<li>	Word template for abstract is available and can be downloaded <a href="http://corona.nitp.ac.in/Corona16/downloads/CONTRIVIA_abstract_format.docx" target="_blank"><u>here</u></a>. Format should be strictly followed.[ You can give
+    the  team name and use it for Abstract Submission ]</li>
+<li>	The selection in the first round will be based on the abstract submitted.</li>
+<li>	All papers must be submitted electronically at ohm.corona2k16@gmail.com with subject "Team Name-Abstract Submission".
+    Last date of submission is 20th january,2016.</li>
+</ul>
+ 
+Round 2: Full Paper Submission<br>
+<ul>
+<li>	The shortlisted teams are required to submit a full paper hard copy two days before the final round.</li>
+<li>	The last date for submission of the full paper is 23rd January, 2016.</li>
+<li>	All paper must be submitted  to  Ankesh Kumar(08969993031),
+email- ohm.corona2k16@gmail.com
+with<br>
+1)	subject "Team Name-Full Paper Submission". E.g. " Technocrates -Full Submission".<br>
+2)	Name and roll no. of the involved students with college name.</li>
+</ul><br>
+ Paper Format or format of the hard copy<br>
+
+All hard copies should be the print out of all slides of the presentation.<br><br>
+
+Final Round: PowerPoint Presentation During Corona’16<br>
+<ul>
+<li>	The final round will be in the form of power-point presentation. The teams shortlisted after round II will be required
+    to present a poster.</li>
+<li>	The teams will get 5 minutes to present their idea. They will then have 1 minute to wind up. This will be followed by a 
+    question and answer session by judges and/or students attending the ppt for 3 minutes duration. 15% marks will be deducted 
+    for every minute exceeded after 6 minutes in presentation. Both the members of the team should present the slides.</li>
+<li>	The decision of the judges would be final and binding.</li>
+</ul>
+<h3>Important Dates</h3>
+Round I<br>
+20th  Jan,2016 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	23:59&nbsp;&nbsp;&nbsp;&nbsp;	Deadline for submission of Abstract<br>
+22nd Jan,2016 &nbsp;&nbsp;&nbsp;&nbsp;23:59&nbsp;&nbsp;&nbsp;&nbsp;	Notification of abstract acceptance for Round II<br><br>
+ 
+Round II (Teams whose abstract is accepted in Round I)<br>
+23rd Jan,2015    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	23:59	&nbsp;&nbsp;&nbsp;&nbsp;Deadline for submission of full paper and forwarding letter
+<br><br>
+Round III <br>
+25th Jan,2015    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+<div><a href="http://corona.nitp.ac.in/Corona16/downloads/CONTRIVIA_abstract_format.docx" target="_blank">Click here</a> to download abstract format</div>
+
+        </div>
+        <div class="aboutevent" id="contriviaprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="contriviacontact" style="display: none;">
+            For any queries contact:<br>
+            Ashwani Kumar Pathak: 09801410754<br>
+            Ankesh Kumar: 08969993031 <br> 
+            
+			
+			
+        </div>
+    
+
+        </div>
+        <div id="php_smashdbug" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#smashintro").show();
+                $("#menusmashintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#smashintro").show();
+                });
+                $("#menusmashrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#smashrules").show();
+                });
+                $("#menusmashprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#smashprize").show();
+                });
+                $("#menusmashcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#smashcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menusmashintro">Introduction</li>
+                <li id="menusmashrules">Rules $ Regulations</li>
+                <li id="menusmashprize">Prizes</li>
+                <li id="menusmashcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="smashintro" style="display: none;">
+            You think you can find bugs in electronic  circuits? Is it a child’s play for you?? Then surely this event is for
+            the debugger in you!!  Smash-d-bug is a three round event comprising of a pen and paper round , then an audio-visual
+            round and finally 5 teams will get to the final round to debug the circuits given to them. So gear up and get going
+            for the event which  is one of its kind..!!  Prizes worth thousands of rupees at stake!!  Register soon!!
+        </div>
+        <div class="aboutevent" id="smashrules" style="display: none;">
+
+        It's a simple technical event which requires a participating candidate
+        to use one's technical aptitude to demystify the bugs in an electrical
+        or electronic circuit or to foretell the consequences of particular
+        arrangement in a circuit(for example by increasing doping
+        concentration in emitter what could be the effect in current flow or
+        switching speed).<br>
+        Mainly the candidates technical skill will be checked in three different rounds.<br><br>
+
+        <h3>Round 1:</h3>
+        This round has 50%technical questions and 50% aptitude question....out
+        of which 25% in technical questions is a must for qualifying....From
+        this paper around 28-36 candidates will be chosen for 2nd round(
+        inclusive of 2nd and 3rd year candidates). This event will be conducted
+		from 12:30 pm to 1:00 pm on 22/01/2016.
+
+        <h3>Round 2:</h3>
+        This round includes  visual clips or some clicks of certain phenomenon
+        or circuit where each candidate has to write about what the bug in
+        circuit is, or identify it(circuit eg. which type of counter or
+        feedback ckts) or write down the consequence of changing a particular
+        parameter on different properties and operation. At its end , around
+        7-8 teams(each with 3 team members) will be selected for final round.
+
+        <h3>Round 3:</h3>
+        All the finalist teams will be given a bugged circuit from their
+        known syllabus..(eg. inclusive of filters circuit, timer circuit etc.)
+        which they have to debug under a specified time limit and produce the
+        result on the CRO/DRO screen. Apart from this there will be a bonus
+        question which every team should answer in another specified time
+        limit.<br>
+
+
+        And then within 3hours , results will be declared..
+        </div>
+        <div class="aboutevent" id="smashprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="smashcontact" style="display: none;">
+		For any queries contact:<br>
+            Ashwani Kumar Pathak: 09801410754<br>
+            Navin Kumar: 07250069817 <br> 
+            
+        </div>
+    
+
+        </div>
+        <div id="php_electromaze" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#mazeintro").show();
+                $("#menumazeintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mazeintro").show();
+                });
+                $("#menumazerules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mazerules").show();
+                });
+                $("#menumazeprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mazeprize").show();
+                });
+                $("#menumazecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mazecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menumazeintro">Introduction</li>
+                <li id="menumazerules">Rules $ Regulations</li>
+                <li id="menumazeprize">Prizes</li>
+                <li id="menumazecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="mazeintro" style="display: none;">
+            The last but not the least!!! Electromze!  Sounds like a maze or a puzzle..??  we will give a 7/10 for the guess..!!!  the event comprises of three rounds: an mcq round, a treasure hunt and the final round  in which you have to  assemble  a circuit from the components found in 2nd ,i.e.; treasure hunt round.
+            <br>Exciting!!! Isn’t it?? So register yourself for the event  and win prizes worth thousands of rupees..!!
+
+        </div>
+        <div class="aboutevent" id="mazerules" style="display: none;">
+          <p>In this event the managerial, technical and scientific skills of the
+students will be tested. This event will consists of a group formed on
+the basis of pick-a-chit method containing the participants from
+each year(1st,2nd,3rd and 4th year).The components whatever
+ required for the circuit design will behidden around the campus of 
+this college and some clues will be provided to find them. Solve the clues,
+ perform some tasks ,find the components.Then a task related to circuit 
+designing will be assignedto all seekers and only their own captain will be 
+allowed to help them.Finally a complete circuit will have to be formed by 
+assembling thebroken parts of the tasks given to all the seekers. The tasks
+ to the seekers from respective batches will be assigned considering their
+depth of knowledge of engineering, so if you are sincerely acquainted
+to the sphere of engineering and technology then the Technical
+version of treasure hunt is waiting for you.</p>
+          <p>
+The cleverest and quickest team to perform this task will walk away
+with their heads high as the winners .</p>
+          <p>
+Participate in it to experience one of the most exciting aspects of
+CORONA the super adventurous technical treasure-hunting.</p>
+          <h2>Content outline:</h2>
+This is an on the spot event.
+<h3>First round:</h3>
+<ul>
+<li>A preliminary test will be conducted 11:30 am to 12:00 noon on 23/01/2016 </li>
+<li>Test has to be solved individually.</li>
+<li>There will be a separate paper for the 1st year and a common
+paper for 2nd year and 3rd year</li>
+<li>There will be certain questions which will be used as tiebreakers in
+the prelims round in case of a tie in the scores between the teams.</li>
+<li>These questions will be there in the test and it will be conveyed to
+the teams before the test right on the spot.</li>
+<li>The marking scheme of the question paper will be given in the
+question paper itself.</li>
+<li>Based on the performance in the test, top 16 students will be selected
+ from 1st year and 8 students will be selected from both 2nd and 3rd year (each).</li>
+        </ul>
+<h3>Second Round:</h3>
+<ul>
+<li>  All the shortlisted participants will be grouped in such a way 
+that each group contains 4 members – 2 from 1st year and 1 each from
+ 2nd and 3rd year.</li>
+<li> Now the components of the final circuit will be hidden around the campus
+ and the teams will be given some specific clues. These clues will act as directions
+ for the teams and they have to solve all the clues and collect these
+ components one by one.</li> 
+<li>After they have collected all the components they have to build the
+ required circuit in the specified Lab.</li>
+<li> Extra time will carry negative marks.</li>
+<li> Incomplete circuit will be disqualified.</li>
+<li>Incomplete circuit will be disqualified.</li>
+<li>The decision of the judges and event co-ordinators shall be
+final.</li>
+<li> Rules are liable to change.</li>
+    </ul>
+        </div>
+        <div class="aboutevent" id="mazeprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="mazecontact" style="display: none;">
+          For any queries contact:<br>
+            Ashwani Kumar Pathak: 09801410754<br>
+            Abhiranjan: 08083027938 <br> 
+            
+        </div>
+    
+
+        </div>
+        <div id="php_open" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#openintro").show();
+                $("#menuopenintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#openintro").show();
+                });
+                $("#menuopenrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#openrules").show();
+                });
+                $("#menuopenprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#openprize").show();
+                });
+                $("#menuopencontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#opencontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuopenintro">Introduction</li>
+                <li id="menuopenrules">Rules $ Regulations</li>
+                <li id="menuopenprize">Prizes</li>
+                <li id="menuopencontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="openintro" style="display: none;">
+            <center>Scientists investigates that which already is; engineers create that which has never been.</center>
+            <center>-Albert Einstein</center>
+            In our life we face many difficulties and in return we generate some ideas to overcome these. In the 
+            creative and innovative engineer mind, ideas emanate and at times, come to stay. We here, through open
+            hardware provide you an opportunity to convert your gray matter into some real design, a life to your idea.
+            So come up and make the eye-balls roll with hardware implementations of your lucid ideas. You will certainly 
+            enjoy this journey of conversion of your thoughts into a working model.
+        </div>
+        <div class="aboutevent" id="openrules" style="display: none;">
+            A maximum of 4 members per team are allowed.
+            <ul>
+                <li>Students from different colleges can also be part of the same team.</li>
+                <li>One student can be part of only one team.</li>
+                <li>The event consists of 3 rounds: the prelims, ppt and the finals.</li>
+                <li>For the prelims, each team will have to mail the abstract together with pictures or videos of their project 
+                    to the coordinators latest by 20th Jan, 2016 on ohm.corona2k16@gmail.com.</li>
+                <li>Selected teams will be informed by email.</li>
+                <li>In 2nd round team have to present PPT of their respective project, explaining the salient points of their 
+                    project and the technology used.</li>
+                <li>In the final round team have to present working model of their project before a panel of judges.</li>
+                <li>The members of the selected teams are required to bring any software they are using in their models.  
+                    In order to avoid compatibility issues, it would be better to bring your own laptops.</li>
+                <li>The models can be constructed on simulation software also, such as multisim or Pspice, but the working 
+                    models will be given more priority.</li>
+                <li>The teams which are having their models on simulation softwares, will be called one day before the event, 
+                    where they will be shortlisted. Only shortlisted students will be allowed to present their models in the
+                    final round.</li>
+         	<li>The decision of the judges and the coordinators will be final and binding.</li>
+            </ul>
+            <h3>Evaluation Criteria</h3> 
+
+            <h4>Innovation</h4>
+	You should clearly specify the innovation in your project. In case you are working on any existing technology you should clearly specify how your technology is better than the existing one.
+
+        <h4>Economic Viability</h4>
+	You should explain the economical value of your project and its feasibility.
+
+        <h4>Presentation</h4>
+	A good presentation in the ppt and during  Endeavour in front of the judges explaining all the details of your project will help the coordinators and the judges in understanding your concepts which will help you.
+
+        <h4>Commercial Value</h4>
+	You should clearly mention how your project solves any commercial or social problem.
+
+        <h4>Implementation of Idea</h4>
+	This will depend on how well your model has been made and how smoothly it works.
+
+            <a href="http://corona.nitp.ac.in/Corona16/downloads/OPEN_HARDWARE_abstract_format.docx" target="_blank"><u>Click here to download registration form.</u></a>
+        </div>
+        <div class="aboutevent" id="openprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="opencontact" style="display: none;">
+           For any queries contact:<br>
+            Ashwani Kumar Pathak: 09801410754<br>
+            Saurabh Dubey: 09472273896 <br> 
+            
+        </div>
+    
+
+        </div>                </div>
+                <div class="eventdetail" id="event_robotics" style="display: none; top: 0px;">
+                            <ul id="vmenu">
+            <!--li id="relayto">The Savior</li-->
+            <li id="aqua">Naval Battle</li>
+            <li id="embed">Embed-o-coder</li>
+            <li id="hunter">The Savior</li>
+        </ul>
+        <!--div id="php_relayto"class="eventpallete">
+                    </div-->
+        <div id="php_aqua" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#aquaintro").show();
+                $("#menuaquaintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#aquaintro").show();
+                });
+                $("#menuaquarules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#aquarules").show();
+                });
+                $("#menuaquaprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#aquaprize").show();
+                });
+                $("#menuaquacontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#aquacontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuaquaintro">Introduction</li>
+                <li id="menuaquarules">Event Details</li>
+                <li id="menuaquaprize">Prizes</li>
+                <li id="menuaquacontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="aquaintro" style="display: none;">
+            <center>“LET US NOT PRAY TO BE SHELTERED FROM DANGERS BUT TO BE FEARLESS WHEN FACING THEM”</center>        
+                                                                      <center>- Rabindranath Tagore </center>
+            <!--Evolution is not just confined to all that is living but technology as well. Science & technology has always helped
+            us to accomplish our task with least effort. But on the other hand it is also giving birth to serious issues like 
+            terrorism. From a long time Terrorism continues to inflict pain & suffering on people all over the world.<br>
+            Like 26/11 Mumbai attack ,terrorists are again planning to invade the Indian defence, this time through The Indian
+            Ocean .They have hijacked Indian cargo ships & are approaching Indian coast. <br>
+           The Indian Navy has asked its best engineers to build an aqua robot that can traverse through the Indian ocean , 
+           rescue the cargo ships & burst the terrorist’s ships & their weapon tanks.<br-->
+		   Planet earth is in Danger. Some betrayer countries on Earth have leaked the information to the aliens about the planet. 
+		   Aliens are arriving to take over the planet. SAVE PLANET EARTH BY MAKING YOUR ROBOT WHICH STANDS AGAINST THEM AND KNOCK THEM OUT. 
+		   Your accomplishment will thwart the betrayers who are headed against you.
+                          <center> “Remember it is tougher to beat your friends than your enemies as they know your weakness.”</center> 
+
+
+        </div>
+        <div class="aboutevent" id="aquarules" style="display: none;">
+            Design a wired or wireless manual robot capable of dragging the given object and complete the specified task in the given time.<br>
+            <h3>ARENA</h3>
+Arena is rectangular cross-section of size 200cm X 400cm (b*l). The Arena is divided in two parts so as to compete two teams simultaneously. 
+There would be three kinds of balls (Red, Blue and Green) representing the bombs to be placed at the enemy site. 
+Each team has to place the bombs in its opponent’s area. 
+The balls should be dragged and dropped in the opponent’s strong sites.
+
+<h3>GAMEPLAY</h3>
+PRELIMS :<br>
+<ul>
+    <li>   Single team will play on the arena at a time.</li>
+    <li>	Team has to start heading from the orange zone</li>
+    <li>	The balls of three colours(3*3each) would be placed on the surface.</li>
+    <li>	Each ball has to be dropped into its matching zone.</li>
+    <li>	Balls should be dropped alternatively (one by one).</li>
+    <li>	Top six teams scoring highest would head to the finals.</li>
+	<li>	Mismatching of zone and ball would loose points.</li>
+	<li>	Mismatching balls would not be counted and awarded some penalty.</li>
+	<li>	A bot can touch the arena a maximum of three times, beyond that the bot would be disqualified.</li>
+	<li>	Maximum of 2 minutes allowed to send all the balls to their respective zones.</li>
+</ul>
+FINALS :<br>
+<ul>
+<li>	Two teams will play on the arena at a time.</li>
+<li>	Teams has to start heading from the orange zone.</li>
+<li>	Time limit will be of 2 minutes for(9*2 balls).</li>
+<li>	The balls of three colours(3*3balls/team + 1 queen after 2 minutes(smaller in size)) would be placed in the arena.</li>
+<li>	Each ball has to be dropped into its matching zone.</li>
+<li>	Balls should be dropped alternatively.</li>
+<li>	Red ball fetches more points.</li>
+<li>	Mismatching of zone and ball would loose points.</li>
+<li>	Mismatching balls would not be counted and awarded some penalty.</li>
+<li>	A bot can touch the arena a maximum of three times, beyond that the bot would be disqualified.</li>
+<li>	After dropping all the diff. balls alternatively into their respective zone teams are allowed to go for Queen.</li>
+<li>	The queen destination will be the starting point of that team (Orange in Colour). </li>
+<li>	Stepping on black lines would loose points.</li>
+
+</ul>
+<h3>TIMING</h3>
+A maximum of 4 minutes in the Prelims and 6 minutes in the Finals are allowed to complete the task.<br>
+<h3>SCORING</h3>
+<!--ul>
+<li>Initially 200 points will be awarded to every team.</li>
+<li>Total time taken (in seconds) to complete the task will be deducted from the final score.</li>
+<li>For carrying each ball to its respective platform 40 points will be awarded.</li>
+<li>For bursting each balloon 60 points will be awarded.</li>
+<li>For crossing each lane of guide wall 20 points will be awarded.</li>
+<li>10 points will be deducted for touching the guide walls (if touching limit is crossed).</li>
+<li>20 points will be deducted for every manual touching.</li>
+<li>30 points will be deducted for each restart taken.</li>
+<li>100 points will be awarded for successfully completing the task within stipulated time.</li>
+</ul-->
+Prelims :<br>
+SCORE= (120-T)+(20*(G+B+R))-(20*H)-(40*Rst)-(10*M/C)-(10*A)<br>
+T= Time taken to clear the arena<br>
+G= Number of green balls successfully dropped.<br>
+B= Number of blue balls successfully dropped.<br>
+R= Number of red balls successfully dropped.<br>
+H= Hand touching the bot<br>
+Rst= Number of times Restarted<br>
+M/C= Number of balls mismatched or placed Consecutively<br>
+A= Number of times bot touched the arena (in case of picking up a ball if balls are laid to the wall, 1 penalty will be count and ball will be kept between the arena.)<br>
+<br>
+Final :<br>
+SCORE=(120-T)+(20*(G+B+R))+50*Q-(20*H)-(40*Rst)-(10*M/C)-(20*A)-(10*S)<br>
+T= Time taken to clear the arena<br>
+G= Number of green balls successfully dropped.<br>
+B= Number of blue balls successfully dropped.<br>
+R= Number of red balls successfully dropped.<br>
+Q=Queen Ball placed successfully<br>
+H= Hand touching the bot(in case of tie penalty would be awarded to both of the team and start again)<br>
+Rst= Number of times Restarted<br>
+M/C= Number of balls mismatched or placed consecutively in one Zone<br>
+A= Number of times bot touched the arena (in case of picking up a ball if balls are laid to the wall, 1 penalty will be count and ball will be kept between the arena.)<br>
+S= Number of times stepped on the black lines<br>
+
+<h3>ROBOT SPECIFICATIONS</h3>
+<ul>
+<li>Bot should fit in a box of 25cm x 25cm x 25 cm (L*B*H) at the time of start; however it may expand during its move.
+    (Maximum 10% tolerance is allowed.)</li>
+<li>Robot must not contain any readymade kits or any such assembly. However readymade gear and shafts may be used.</li>
+<li>The voltage difference between any two points on bot must not exceed 24 volts.</li>
+</ul>
+<h3>TECHNICAL DETAILS</h3>
+<ul>
+<li>Team members will not be allowed to touch any part of arena, only organizer are allowed to handle the arena in any situation
+    , the team will be disqualified whose member found touching arena.</li>
+<li>Teams will not be allowed to change bot’s mechanism and parts once the game started.</li>
+<li>Participants are not allowed to keep anything inside arena other than the bot.</li>
+<li>The time measured by organizers will be final and will be used for scoring. Time measured by participants is not acceptable 
+    for scoring.</li>
+<li>Organizing team will not be responsible for any kind of damage to your bot.</li>
+<li>Organizers decision will be final and binding in case of any dispute.</li>
+<li>Organizers reserve the right to change any of the above rules they deem to be fit.</li>
+<li>The participants will be provided with 220 Volts, 50Hz standard AC supply. Participants will have to themselves arrange for
+    any other power supply required for their robot.</li>
+<li>There may be slight variation in dimension of the arena &amp; number of balls are liable to change.</li>
+</ul>
+<h3>TEAM RULES</h3>
+<ul>
+<li>This event is restricted to students currently studying in any recognized Educational institute.</li>
+<li>A maximum of four participants are allowed per team.</li>
+<li>Students from different colleges can be a part of same team.</li>
+<li>An individual cannot be part of more than one team.</li>
+<li>Participants must bring the valid identity card of their institute.</li>
+<li>There is no restriction to the number of teams participating from same educational institute.</li>
+</ul>
+<br>
+<div><a href="http://corona.nitp.ac.in/Corona16/downloads/navalbattle.pdf" target="_blank">Click here</a> to download PDF</div>
+        </div>
+        <div class="aboutevent" id="aquaprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="aquacontact" style="display: none;">
+            <for any="" queries="" contact:<br="">
+            Event Co-Coordinator <br>		
+Vikash Kumar, Mob- 9334251127<br>
+Vikas Kumar Maurya  Mob:- 9122747832 <br>
+
+
+Organiser: <br>
+Saransh Jain, Mob- 9958864575  <br>
+Aayushi Jain  <br>
+
+        </for></div>
+    
+
+        </div>
+        <div id="php_embed" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#embedintro").show();
+                $("#menuembedintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#embedintro").show();
+                });
+                $("#menuembedrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#embedrules").show();
+                });
+                $("#menuembedprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#embedprize").show();
+                });
+                $("#menuembedcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#embedcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuembedintro">Introduction</li>
+                <li id="menuembedrules">Event Details</li>
+                <li id="menuembedprize">Prizes</li>
+                <li id="menuembedcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="embedintro" style="display: none;">
+            40 years back one would have never thought that a tiny black coloured device with multiple metallic legs can control
+            a giant aeroplane. Yes my dear friends this is the magic of Embedded Systems. They are found everywhere, from 
+            Bugatti Veyron to Supersonic jets, robots, mobiles, washers, dryers and even microwave ovens. The power of these 
+            devices is increasing day by day.<br>
+		Today an entire house can be computerized using an embedded system which can control heating, lighting, alarm 
+                systems and even coffee makers. Web access can enable a home owner to tell the house to heat up before he/she 
+                arrives home. Someday the refrigerator may call the grocery store when it notices the milk gone.<br><br>
+	Corona’16 presents EMBEDD-O-CODER, an event specially designed for embedded system lovers …… Come and see the new 
+        horizons of Embedded Systems &amp; way beyond.
+
+        </div>
+        <div class="aboutevent" id="embedrules" style="display: none;">
+            Team size : 2 
+             <h2>Prelims:</h2>  
+            This is a paper based objective test which will test your knowledge of IC‚ basic programming skill, microcontroller etc. 
+			within a stipulated time (to be mentioned at the time of competition). 
+
+             <h2>Finals:</h2>  
+             Write programs for microcontroller in any language for given set of task‚ compile and run it on 
+            development board (to be provided at the time of competition).  During final each problem statement will pop up 
+            after every 10 minutes‚ and a total of 6 questions will be asked. Once a Question is popped up‚ you can either 
+            write a program and compile it as fast as possible or wait for next Question to be popped.   Best compile time of 
+            every team will be recorded for final judgment and score calculation. Later we will program your code in 
+            development board to run it. For each successful run 50 points will be given.  Top three to complete the task 
+            within a stipulated time (to be mentioned at the time of competition) will be declared winners.  
+            <h3>General Rules:</h3> 
+            <ul>
+                <li>Both the rounds will be time based.</li> 
+                <li>Participants can use any Programming Language and IDE. </li>
+                <li>Participants are not allowed to use internet from any source while competition is going on.</li> 
+                <li>System will be provided by us with software WinAvr2010 and RHINO programmer preinstalled. </li>
+                <li>However you can bring your software with you but inform the organizers at least one hour before the start of the
+                event so that software could be installed on the system.</li>
+            </ul><br><br>
+            <div><a href="http://corona.nitp.ac.in/Corona16/downloads/embed.pdf" target="_blank">Click here</a> to download as PDF</div>
+         </div>
+        <div class="aboutevent" id="embedprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="embedcontact" style="display: none;">
+            For any further queries contact,<br><br>
+            Event Co-coordinator:-<br>			
+			Nitesh Kumar Choudhary, Mob:- 9006847351 <br>
+			Kumar Prince, Mob:-8271540085  <br>
+
+        </div>
+    
+
+        </div>
+        <div id="php_hunter" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#hunterintro").show();
+                $("#menuhunterintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hunterintro").show();
+                });
+                $("#menuhunterrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hunterrules").show();
+                });
+                $("#menuhunterprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#hunterprize").show();
+                });
+                $("#menuhuntercontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#huntercontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuhunterintro">Introduction</li>
+                <li id="menuhunterrules">Event Details</li>
+                <li id="menuhunterprize">Prizes</li>
+                <li id="menuhuntercontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="hunterintro" style="display: none;">
+            <center><h3>"Click on Event Details!!!"</h3></center>
+			<!--
+This is the time when we should think out of our circle{Gola(Earth)} .To us science fiction is lense through which we can explore our place and future in the universe.we rounded up the latest knowledge about wormhole travel,robotic companions,habitable exoplanets,and of course,Starship.
+It is appropriate to consider the FHM(fortune-hunter mission) as three distinct phases:the termination sock,heliosheath exploration,and ocean of emptiness exploration phases.  
+After completion two phase of FHM selected three best astronauts ,who travel through a wormhole in search of new home for humanity.
+-->
+        </div>
+        <div class="aboutevent" id="hunterrules" style="display: none;">
+            <h2>PROBLEM STATEMENT:</h2>
+            <p>  Design an autonomous bot to traverse the given track in shortest possible time under certain rules and regulations.</p>
+            <h2>Gameplay:</h2>
+			<p>The game will be played in two rounds. Top 6 teams will qualify for the final round.</p>
+            <h3>Round 1:</h3>
+	<p>In the round 1, the autonomous bot simply has to traverse a path at a stretch in minimum time. (Refer to pdf)</p>
+
+        <p></p><h3>Note:</h3>  The vertical strips and the “path breaks” shown will not be present in first round. It will be introduced in the second round.<p>
+        </p><p>
+            In this round, only minor changes in the game plan, here they are- <br>
+			1.	Black strips of dimension (2cm * 10 cm) will be introduced perpendicular to path.  The bot must be capable of judging the right path and reach its destination.<br>
+2.	The path breaks, of length 8 cm, will also be introduced in the midst of path. Bot has to cross the ‘path breaks’ to reach the end point. <br>
+3.	The bot should stop automatically at end point. <br>
+
+        </p>
+        <!--ul>
+            <li>5 then bot must reach at 1st END in Zone Band rest two will become Dead END.</li>
+            <li>6-8 then bot must reach at 2nd  ENDin Zone Band rest two will become Dead END.</li>
+            <li>9/10 then bot must reach at 3rd  ENDin Zone Band rest two will become Dead END.</li>
+        </ul><p>
+In any of these cases Bot will never reach at “Dead END”(Including a permanent Dead END).
+        </p-->
+        <h2>Arena Specification:</h2>
+        <h3>Round 1:</h3>
+        <ul>
+            <li>1.	Path is the black strip of 2 cm width on white surface.</li>
+<li>2.	Length of path breaks extends to 8 cm (Round 2).</li>
+<li>3.	The perpendicular black strips introduced in “round 2” measures 2*10 cm^2.  (2cm along the path * 10 cm perpendicular to path)(Round 2)..</li>
+<li>4.	The starting point of “round 1” will now be the finish line for “round 2”. Similarly finishing line “of round 1” will be start point for “round 2”.</li>
+
+
+
+        </ul>
+
+<!--h3>Round 2:</h3>
+<ul>
+    
+<li>The width of arena will be 30cm.</li>
+<li>Arena will be 5 inch above from the surface.</li>
+<li>Arena comprise of 2cm wide Black line on White background. </li>
+<li>There are Black strips on of the track having 2cm wide.</li>
+<li>There is a White path break in both of the Zone.</li>
+</ul-->
+<h2>IMPORTANT POINTS: </h2>
+<ul>
+    <li>1.	In case of restart, participants may have to take chance awarding some Penalty or may have to quit without disturbing earned points (Decided by Team ROBOTICS).</li>
+     <li>2.	 Each team will be given a trial run. After that, within 20 minutes they have to take final run else, they will be disqualified.  </li>
+
+</ul>
+<h2>General Guidelines:</h2>
+<ul>
+    <li>The voltage difference between any two points on bot must not exceed 24 volts. </li>
+ <li>The bot must be completely autonomous with all powering andmonitoring mechanism self-contained.</li> 
+ <li>The robot can be powered on-board as well as off-board.</li>
+ <li>Hard coding is strictly prohibited and any team found using hard coding will be instantly disqualified. </li>
+ <li>Teams are allowed to use readymade micro-controller boards/ readymade sensor kits. However teams are not allowed
+     to use readymade Lego kits and any such assemblies.</li>
+<li>This competition is open for all the students. Registration can be done the spot before beginning of event.</li>
+</ul>
+<h2> 
+Bot Specification:</h2>
+<ul>
+    <li>Robot can have maximum dimension of 25*25*25 cm3 (L*B*H) respectively.</li>
+    <li>No part/mechanism of/on the robot should exceed the given dimensions beforethe 
+        commencement of the event run. The robots can exceed their respectivedimensions once the event commences.</li>
+    <li>The robots need to follow lines and traverse only along the given path.</li>
+    <li>Robots must not be controlled by a remotely kept computer.</li>
+    <li>The bots should not harm the arena in any way. If it does so, a penalty will be imposed on the team. The magnitude 
+        of the penalty will be decided by Team “ROBOTICS”..</li>
+</ul>
+<h2>
+Team Specification:</h2>
+<ul>
+    
+<li>Maximum Four members are allowed to form a team. </li> 
+<li>Students of different institutes may constitute a team. </li>
+<li>Students must have the Identity card of their respective colleges else their participation will not be validated.</li>
+
+</ul>
+
+<h2>Scoring:</h2>
+	<h3>Round 1:</h3>
+        <p>
+1st Round: <br>
+	P= 180-T-20*H-40*R <br>
+	<br>
+2nd Round:<br>
+	P=180-T+5*B+10*W-20*H-40*R<br>
+Where, <br>
+	Initial Point= 180<br>
+	P=Total Points<br>
+T= Time taken in seconds<br>
+H= Hand touch<br>
+R=Each restart<br>
+B= Number of black strip detected.<br>
+W= Number of white gap traversed.<br>
+
+
+        </p>
+        <!--h3>
+	Round 2:</h3>
+        <p>
+	Score= 420-T-20*H+C-P+S<br><br> 
+            T=Time taken to complete the task (in second)<br> 
+            H= penalty for each Hand Touch <br>
+            C=300(If task completed successfully)<br>   
+           S= 100*(no. of strip detected in ZONE A)/(Total no. of strips in ZONE A)<br>                                                                                                     
+           P= Penalty 300(For visiting permanent dead END) or 200(For visiting other dead END)<br>
+        </p>
+        <h2>Final round: named as ocean of emptiness exploration</h2>
+        <p> After completing two phases, top three teams will enter into the third phase. In this round a question & answer
+            session wii be held by robotics team, based on the FHM (fortune hunter mission). </p>
+        Score=     score of round2+10*C-10*W;<br><br> 
+        C=correct answer of the question; <br>
+        W=wrong answer of the question; <br>
+        Total no of Questions(Q)=5 each team<br-->
+		
+        <h2>Rules:</h2>
+        <ul>
+            <li>Time measured by the organizers will be final and is not subjected to change. </li>
+            <li>In case of any dispute the decision of the organizers will be binding. </li>
+            <li>Bots found damaging the arena will be immediately disqualified without any further arguments and scope of discussion.</li>
+            <li>Participants will have to bring their own programmers, cables and soft-wares. Noprogrammers will be supplied.</li>
+            <li>Violation of rules may force us to take strict decisions.</li>
+			<li>Organizers reserve the right to change any of the above mentioned rules that deems to be fit.</li>
+        </ul>
+        <div><a href="http://corona.nitp.ac.in/Corona16/downloads/thesavior.pdf" target="_blank">Click here</a> to download PDF</div>
+        </div>
+        <div class="aboutevent" id="hunterprize" style="display: none;">
+           To be updated soon.
+        </div>
+        <div class="aboutevent" id="huntercontact" style="display: none;">
+      <for any="" queries="" contact:<br="">
+            Event Co-Coordinator: <br>                                      		
+			Kumar Prince		<br>			 
+				Mob- 8271540085<br>
+
+			Organizer:  <br>
+				Pankaj Kumar          	Mob- 9097439539<br>
+				Neha Singh		<br>
+<br>
+        </for></div>
+    
+
+        </div>                </div>
+                <div class="eventdetail" id="event_yantriki" style="display: none; top: 0px;">
+                            <ul id="vmenu">
+            <li id="machinist">Machinist</li>
+            <li id="mech">Mech-a-rush</li>
+            <li id="moto">Trivia-do-moto</li>
+            <li id="innovative">Innovative Exemplar</li>
+        </ul>
+        <div id="php_machinist" class="eventpallete" style="display: none;">
+            
+
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#machinistintro").show();
+                $("#menumachinistintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#machinistintro").show();
+                });
+                $("#menumachinistrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#machinistrules").show();
+                });
+                $("#menumachinistprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#machinistprize").show();
+                });
+                $("#menumachinistcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#machinistcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menumachinistintro">Introduction</li>
+                <li id="menumachinistrules">Rules $ Regulations</li>
+                <li id="menumachinistprize">Prizes</li>
+                <li id="menumachinistcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="machinistintro" style="display: none;">
+             <center>“For perfection in everything you do, Take the best that exists 
+                 and make it better. When it does not exists, design it.”</center>
+            <center>-Sir (Frederick) Henry Royce British Engineer, 1863-1933</center>
+            Machinist also has the same motive. THE MACHINIST, master of operating machines and using tools, get ready to
+            show your mechanical skills on the machine. One machine can do the work of fifty ordinary men but no machine can do the work of one extraordinary man. So be the extraordinary and come up to reveal your knowledge of the machines and mechanisms to use them to design and build a machine which will perform according to our problem. Corona brings the correct platform to bring out your ingenuity so that you can show the hidden 
+            machinist in you. So fasten your belts and get ready to face the challenge!! 
+
+        </div>
+        <div class="aboutevent" id="machinistrules" style="display: none;">
+            Event will be organized in 3 phases. 
+            <h2>Round 1</h2>
+            Prelims will consist of a written objective test of around 25 minutes and the questions will be based on basics of workshop practice and basic fundamentals of Mechanical Engineering. 
+            <h2>Round 2 </h2>
+            Teams will be formed with Shortlisted candidates and based on a practical problem provided by organizers, they will have to prepare a working machine within a given period of time. All the necessary materials and tools will be provided at that time. 
+            <h2>Round 3</h2>
+            It will consist of practical testing of the device based on different performance criterion. The machine has to perform the given task in the arena. Judgment will be done on the basis of design of machine and performance in arena. 
+            <h2>Rules:</h2>
+            <ul>
+                <li>Student from different institutes can form a team. </li>
+                <li>Each team will consist of maximum 3 members. </li>
+                <li>Only the materials provided by the organizing team should be used, violation can lead to disqualification. </li>
+                <li>The detail instructions of the final round will be given at the time of event. </li>
+                <li>The decision of the judges shall be treated as final and binding in any circumstances Further details will be uploaded soon.</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="machinistprize" style="display: none;">
+            To be updated soon
+        </div>
+        <div class="aboutevent" id="machinistcontact" style="display: none;">
+           <!-- Email id - yantriki.nitp@gmail.com <br> 
+Kumar Yash Kesharwani (8083501002)<br>
+Event co-coordinator - Vibhor Gupta (+91 9572436371) 
+-->
+Email id - yantrikicorona16@gmail.com <br> 
+Event co-coordinator - Mohit Saurabh (+91 7783856056)<br>
+Event co-coordinator - Vibhor Gupta (+91 9572436371)<br>
+        </div>
+    
+
+        </div>
+        <div id="php_mech" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#mechintro").show();
+                $("#menumechintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mechintro").show();
+                });
+                $("#menumechrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mechrules").show();
+                });
+                $("#menumechprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mechprize").show();
+                });
+                $("#menumechcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#mechcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menumechintro">Introduction</li>
+                <li id="menumechrules">Rules $ Regulations</li>
+                <li id="menumechprize">Prizes</li>
+                <li id="menumechcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="mechintro" style="display: none;">
+            You must have been fascinated by adventurous stories and desired to 
+            go on a journey full of adventures. In Mech-A-Rush we have planned 
+            more or less similar journey in the technical world. ‘Engineers like
+            to solve problems. If there are no problems handily available, they
+            will create their own’. So engineers it’s time to show your dexterity 
+            and find a solution of the problem to get yet another problem for
+            reaching the final DESTINATION.  The team of Adventure freaks competing
+            for the title will be given clues that will help them advance in 
+            their course through various places in the campus of NIT Patna leading
+            them to the winners spot. So it’s time to prove your mettle and be an
+            ADVENTUROUS WINNER  !!   
+        </div>
+        <div class="aboutevent" id="mechrules" style="display: none;">
+            <h2>ROUND 1</h2>
+            <ul>
+                <li>The prelims will consist of a written test of 25 minutes based on Aptitude Test,
+            Current Affairs and basics of Mechanical Engineering. </li>
+                <li>Selected participants will go ahead for the final round. In case of a
+            tie in scores, the participant with minimum negative marks in the prelims will make it to the finals. </li>
+            </ul>
+            <h2>ROUND 2</h2> 
+            <ul>
+                <li>The second round will consist of a team of 3 members (one member from every each year).</li>
+                <li>The team will be given clues which will act as directions for the teams as they solve the clues. </li>
+                <li>At each checkpoint, the teams will be given questions to solve 
+            which has to be solved at that point itself. The questions will be 
+            of objective type and mostly related to the sphere of mechanical engineering.</li>
+                <li>At each checkpoint, the clue for next checkpoint will be provided.</li>
+                <li>The scores at each checkpoint and the total time taken by the team to complete the race will be taken in to consideration while computing the result. 
+</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="mechprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="mechcontact" style="display: none;">
+           <!-- Email id - yantriki.nitp@gmail.com <br>
+Kumar Yash Kesharwani (8083501002)<br>
+Event co-coordinator: Rahul kumar (9031826228)
+-->
+Email id - yantrikicorona16@gmail.com <br> 
+Event co-coordinator - Mohit Saurabh (+91 7783856056)<br>
+Event co-coordinator - Vibhor Gupta (+91 9572436371)<br>
+        </div>
+    
+
+        </div>
+        <div id="php_moto" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#quotientintro").show();
+                $("#menuquotientintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#quotientintro").show();
+                });
+                $("#menuquotientrules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#quotientrules").show();
+                });
+                $("#menuquotientprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#quotientprize").show();
+                });
+                $("#menuquotientcontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#quotientcontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuquotientintro">Introduction</li>
+                <li id="menuquotientrules">Rules $ Regulations</li>
+                <li id="menuquotientprize">Prizes</li>
+                <li id="menuquotientcontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="quotientintro" style="display: none;">
+            Corona 16 presents you the opportunity to showcase your talent in 
+            the field of automobiles. If you have it in yourself to best the
+            best of the lot, we challenge you to come up and beat others to 
+            prove your mettle. So gear up, pull up your socks and be prepared
+            because here we bring you our very own quiz.
+        </div>
+        <div class="aboutevent" id="quotientrules" style="display: none;">
+            <h2>First round</h2>
+            The first round will be a pen and paper round and questions will be
+            asked on anything and everything related to automobiles.  
+            <h2>Second round</h2>
+            The next round will be an outright quizzing round and the same topic of automobiles will be focused on. 
+
+	<h2>Rules</h2>
+        <ul>
+            <li>Teams of two are allowed not more than that.</li>
+            <li>For the second round 6 teams will be selected from the first round.</li>
+            <li>Any changes will be notified later.</li>
+        </ul>
+        </div>
+        <div class="aboutevent" id="quotientprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="quotientcontact" style="display: none;">
+          <!--  Email id - yantriki.nitp@gmail.com <br>
+Kumar Yash Kesharwani (8083501002)<br>
+Event co-coordinator: Sayondeep sadhu (8092875002)
+-->
+	Email id - yantrikicorona16@gmail.com <br> 
+Event co-coordinator - Mohit Saurabh (+91 7783856056)<br>
+Event co-coordinator - Vibhor Gupta (+91 9572436371)<br>
+        </div>
+    
+
+        </div>
+        <div id="php_innovative" class="eventpallete" style="display: none;">
+            
+
+    
+        
+        <script>
+            $(document).ready(function(){
+                $(".aboutevent").hide();
+                $("#innovativeintro").show();
+                $("#menuinnovativeintro").click(function(){
+                    $(".aboutevent").hide();
+                    $("#innovativeintro").show();
+                });
+                $("#menuinnovativerules").click(function(){
+                    $(".aboutevent").hide();
+                    $("#innovativerules").show();
+                });
+                $("#menuinnovativeprize").click(function(){
+                    $(".aboutevent").hide();
+                    $("#innovativeprize").show();
+                });
+                $("#menuinnovativecontact").click(function(){
+                    $(".aboutevent").hide();
+                    $("#innovativecontact").show();
+                });
+            });
+        </script>
+    
+    
+        <div id="eventmenu">
+            <ul>
+                <li id="menuinnovativeintro">Introduction</li>
+                <li id="menuinnovativerules">Rules $ Regulations</li>
+                <li id="menuinnovativeprize">Prizes</li>
+                <li id="menuinnovativecontact">Contact</li>
+            </ul>
+        </div>
+        <div class="aboutevent" id="innovativeintro" style="display: none;">
+            <center>“Scientist investigate that which already is; Engineers create that which has never been” - Albert Einstein</center><br><br>
+Innovations are part of engineering but a many of them just remains within, depriving the technical world of its life. If you have an innovative idea pertaining to mechanical, then Corona provides you a great platform in the form of "INNOVATIVE EXEMPLAR" to bring out the Einstein within and show plethora of your skills.
+
+        </div>
+        <div class="aboutevent" id="innovativerules" style="display: none;">
+            <h2>Round 1:</h2>
+            <ul>
+                <li>Team must comprise of 2 to 4 members. </li>
+                <li>The teams will have to submit the abstract of their model
+                    within 200-250 words and model may be working or non-working. </li>
+                <li>Abstract should give the clear idea of what is to be done and all the relevant information.</li>
+                <li>Abstract format : 
+                    Team Name : Topic : Team Detail : Mention Roll No. if NITP student and College Name in case of Non-NITP S.No.
+                    Name Roll No./ College Name Email Contact No.: 1. 2. 3. 4.
+                    abstract : • Brief Introduction (Concepts) • Design • Working • Application Selected teams will be 
+                    informed via email or phone. 
+                </li>
+                <li>Last date for submission of abstract is 22nd Jan,2016.</li>
+            </ul>
+            
+            <h2>Round 2: </h2>
+            <ul>
+                <li>Selected teams will have to be present with their model 
+                    (working or non-working), which they have to present before the judges. </li>
+               <li>Questions will be asked by the judges related to the model and your ideas.</li>
+                <li>Marks will be awarded by judges on the basis of innovation in your model, presentation and the way of you answer logically.</li>
+                <li>Top 3 teams will be awarded with certificate and lots of cash prizes.</li>
+            </ul>
+            <h2>Rules:</h2>
+            <ul>
+                <li>All the selected teams from Round 1 will have to present 1 hour before the commencement of event. </li>
+                <li>Participants will have to follow the instructions given by the organiser strictly. Any violation may lead to disqualification. </li>
+                <li>The organiser reserves the right to bring any necessary change in the event at the time of event itself. </li>
+                <li>Decision of judges will be final and binding to all. </li>
+            </ul>
+            <h2>Topics:</h2>
+            <ul>
+                <li> Intelligent home lighting systems</li>
+                <li>Energy reservoir system</li>
+                <li>Shock absorbers and suspension systems</li>
+                <li>V - engines</li>
+                <li>power generation through speed breakers</li>
+                <li>cooling towers design</li>
+                <li>CNC machine</li>
+                <li>modern manufacturing procedures</li>
+                <li>electronically controlled suspension modles in cars</li>
+                <li>aerodynamics in race cars</li>
+                <li>maglev</li>
+                <li>smart materials and their applications</li>
+                <li>voice controlled fuel injection</li>
+            </ul>
+            <div>Students can select topics of their own and have to submit the abstract by 22nd noon. <br>
+The students have to submit their abstract at yantrikicorona16@gmail.com</div>
+        </div>
+        <div class="aboutevent" id="innovativeprize" style="display: none;">
+            To be updated soon.
+        </div>
+        <div class="aboutevent" id="innovativecontact" style="display: none;">
+           <!-- For any queries contact:<br>
+            Email id - yantriki.nitp@gmail.com<br>
+            Kumar Yash Kesharwani (8083501002)<br>
+            Event co-coordinator : Abhishek Jain (8578868752)
+			-->
+			Email id - yantrikicorona16@gmail.com <br> 
+Event co-coordinator - Mohit Saurabh (+91 7783856056)<br>
+Event co-coordinator - Vibhor Gupta (+91 9572436371)<br>
+        </div>
+    
+
+        </div>                </div>
+                </strong></strong></div><strong><strong>
+            </strong></strong></div><strong><strong>
+            <div class="slidepane" id="sponsors">
+                    <div class="divpallete" style="width: 1348px;">
+    <div style="height:420px;overflow-y: scroll;margin-left: 120px;width:1190px"><h1>Sponsors</h1>
+        
+            
+			To be updated soon...
+        <table align="center" width="100%" id="sponsortable"></table>
+        <br><br><br><br><br>
+    </div>
+</div>
+
+            </div>
+            <div class="slidepane" id="workshops">
+                   <script>
+var work_sema=0;
+var dang=-90;
+var dangr=0;
+var work,workrev;
+ $(document).ready(function(){
+        
+    $("#work_vehicle").click(function(){
+        if(work_sema==0)
+            {
+                $(".work_pal").hide();
+                $(this).show();
+                set_work_pal();
+            }
+        });
+    $("#work_plc").click(function(){
+        if(work_sema==0)
+            {
+                $(".work_pal").hide();
+                $(this).show();
+                set_work_pal();
+            }
+        });
+    $("#work_cloud").click(function(){
+        if(work_sema==0)
+            {
+                $(".work_pal").hide();
+                $(this).show();
+                set_work_pal();
+            }
+        });
+    $("#work_bridge").click(function(){
+        if(work_sema==0)
+            {
+                $(".work_pal").hide();
+                $(this).show();
+                set_work_pal();
+            }
+        });
+    $("#work_back").click(function(){
+            reverse_div();
+            $(".work_pal").show();
+            $(".work_pal").animate({width:'253px'},900);
+            $(".work_pal").css("padding-top","64px");
+            $(".work_pal").css("top","44px");
+            $(".work_pal").css("cursor","pointer");
+            $(".work_pal").animate({height:'45px'},900);
+            $(".moredetails").slideUp("fast");
+            $("#work_back").hide();
+            dang=-90;
+            work_sema=0; 
+        });
+ });
+function set_work_pal()
+{
+    rotate_div();
+    $(".work_pal").animate({width:'1150px'},900);
+    $(".work_pal").css("padding-top","6px");
+    $(".work_pal").css("top","0px");
+    $(".work_pal").css("cursor","initial");
+    $(".work_pal").animate({height:'190px'},900);
+    $(".moredetails").delay(900).slideDown("fast");
+    $("#work_back").show();
+    work_sema=1; 
+    dangr=0;
+}
+function rotate_div()
+{
+    work=setInterval(function(){
+        if(dang>=0)
+            clearInterval(work);
+        $(".work_pal").css("transform","rotate("+dang+"deg)");
+        dang++;
+    },10);
+}
+function reverse_div()
+{
+    workrev=setInterval(function(){
+        if(dangr<=-90)
+            clearInterval(workrev);
+        $(".work_pal").css("transform","rotate("+dangr+"deg)");
+        dangr--;
+    },10);
+}
+</script>
+<div class="divpallete" style="width: 1348px;">
+   
+ 
+   <h1>Workshops</h1><div id="work_back">←</div>
+   To be updated soon...
+      <!--  <div id="workshopdetail">
+            <div id="work_vehicle" class="work_pal">
+                VEHICLE OVERHAULING
+                <div class="moredetails">
+                    <?php// include './php/vehicle.php'?>
+                </div>
+            </div>
+            <div id="work_bridge" class="work_pal">
+                BRIDGE DESIGN
+                <div class="moredetails">
+                                    </div>
+            </div>
+            <div id="work_cloud" class="work_pal">
+                CLOUD COMPUTING
+                <div class="moredetails">
+                                    </div>
+            </div>
+            <div id="work_plc" class="work_pal">
+                PLC SCADA
+                <div class="moredetails">
+                                    </div>
+            </div>
+        </div>
+		-->
+</div>
+
+            </div>
+            <div class="slidepane" id="guesttalks">
+                   <div class="divpallete" style="width: 1348px;">
+    <div style="height:370px;overflow-y: scroll;margin-left: 120px;width:1190px"><h1>Guest Talk</h1>
+       
+<!--	   
+        <h2>Mr. Kumar Gyanendra</h2>
+        
+        <img style="width: 105px;" src="./images/gyan.jpg" alt="mr. gyanendra">
+        <div style="font-family: Century Gothic; margin: 10px 78px; text-align:justify ">This year the other famous personality, who is going to grace
+            the fest by his presence, is Mr. Kumar Gyanendra, founder and president of Bihar Students &amp; Youth Front.
+                           The history of Bihar Student &amp; Youth Fund dates back to 1999. Kumar always identified himself with the issues which affected students and youth. So he founded Bihar Student Youth Fund in 1999. The main concern of Bihar Student &amp; Youth Fund is the “upliftment of technical education in Bihar”.
+                Kumar is also the founder of “D.U Helpline” in 2002 for students of Bihar and Jharkhand to help in taking admissions in Delhi University. Presently Kumar is running helplines for dozens of universities.
+                Kumar is a selfless person who has done a lot for imparting free education to the children and youth.
+              We hope garner something of his inspiring calibre. </div>
+                    <h2>Mrs.Nisha Jha</h2>
+                    
+        <div style="font-family: Century Gothic; margin: 10px 78px 10px 0px;text-align:justify ">Our college is proud to have some wonderful
+            and esteemed guests to enlighten the participants and the student body with the enriching lectures. 
+            This time we have the commendable Nisha Jha, Chairperson Bihar commission for security of Child Rights. 
+            Knowing that children are the future of our developing nation, it is an inevitable task to ensure a secure
+            and healthy environment to our children. In the light of the Peshawar school attacks we tend to think more
+            about how to create a world where children can run, play, learn and grow freely.
+Nisha, the third daughter in her family, went to a government school and graduated from the Magadh University. 
+She also pursued mass communication (correspondence) course. Always fond of children, Jha always did her bit to
+help the underprivileged children. While staying in Delhi, Nisha helped her domestic help get her son admitted 
+in nursery in a private school. She convinced the school authorities that the child deserved quality education and
+became the local guardian of the child. The child is in Class VIII today. Several other underprivileged people in 
+the area later came to Nisha for help. Jha became the local guardian of many other underprivileged children and got
+them admitted in private schools. Jha feels the environment in which a child grows up matters a lot. The environment
+assists in the development of a child. So it’s important to ensure a healthy environment for all children.Jha also 
+taught in a private school in Dhanbad for three years. She assisted her husband Madan Mohan Jha in his research on
+inclusive education while staying in London. Her husband used to take suggestions from her on different topics and
+used to include them in his research. After the death of her husband in 2007 (he was then principal secretary,
+Bihar human resource development department) Nisha started an NGO — Shikshansh — in 2008 to help underprivileged
+children. Jha resigned from the post of Shikshansh chairperson to join CRPC). Jha’s aim is to improve the quality 
+of school education up to village level and says it will be possible only when both privileged and underprivileged 
+parents will come forward to assist her.  </div>
+-->
+To be updated soon...
+    </div>
+	
+	
+</div>            </div>
+            <div class="slidepane" id="mainatt">
+                   <script>
+var fun_sema=0;
+var fundang=-90;
+var fundangr=0;
+var fun,funrev;
+ $(document).ready(function(){
+        
+    $("#fun_inferno").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });
+    $("#fun_streets").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });
+    $("#fun_flash").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });
+    $("#fun_cricket").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });
+    $("#fun_livecs").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });
+	$("#fun_paper").click(function(){
+        if(fun_sema==0)
+            {
+                $(".fun_pal").hide();
+                $(this).show();
+                set_fun_pal();
+            }
+        });	
+    $("#fun_back").click(function(){
+            reverse_fun_div();
+            $(".fun_pal").show();
+            $(".fun_pal").animate({width:'253px'},900);
+            $(".fun_pal").css("padding-top","64px");
+            $(".fun_pal").css("top","44px");
+            $(".fun_pal").css("cursor","pointer");
+            $(".fun_pal").animate({height:'45px'},900);
+            $(".morefundetails").slideUp("fast");
+            $("#fun_back").hide();
+            fundang=-90;
+            fun_sema=0; 
+        });
+ });
+function set_fun_pal()
+{
+    rotate_fun_div();
+    $(".fun_pal").animate({width:'1150px'},900);
+    $(".fun_pal").css("padding-top","6px");
+    $(".fun_pal").css("top","0px");
+    $(".fun_pal").css("cursor","initial");
+    $(".fun_pal").animate({height:'190px'},900);
+    $(".morefundetails").delay(900).slideDown("fast");
+    $("#fun_back").show();
+    fun_sema=1; 
+    fundangr=0;
+}
+function rotate_fun_div()
+{
+    fun=setInterval(function(){
+        if(fundang>=0)
+            clearInterval(fun);
+        $(".fun_pal").css("transform","rotate("+fundang+"deg)");
+        fundang++;
+    },10);
+}
+function reverse_fun_div()
+{
+    funrev=setInterval(function(){
+        if(fundangr<=-90)
+            clearInterval(funrev);
+        $(".fun_pal").css("transform","rotate("+fundangr+"deg)");
+        fundangr--;
+    },10);
+}
+</script>
+<div class="divpallete" style="width: 1348px;">
+    <h1>Main Attraction</h1><div id="fun_back" style="display: none;">←</div>
+        <div id="funeventdetail">
+		
+            <div id="fun_inferno" class="fun_pal" style="display: block; width: 253px; padding-top: 64px; top: 44px; cursor: pointer; transform: rotate(-90deg); height: 45px;">
+                INFERNO
+                <div class="morefundetails" style="display: none;">
+                    The most awaited and anticipated event of CORONA'16. Yup folks College
+version of Roadies is back in its 8th consecutive season with more thrilling
+and adventurous tasks paving your way to the mammoth sum of money.So just get down
+and hold your breath to face the younger and more rowdier 
+versions of RAGHU &amp; RAJIV.<br><br>
+If you got d nerve to "DO THE HELL" !! Then prepare to face it as well..........<br>
+<h3>RULES:</h3>
+<ul>
+    <li>Register yourself online/offline.</li>
+    <li>Fill up the application form.(BEWARE!! Just be the real you.)</li>
+    <li>Clear the nerve freezing interviews and the arena is yours....</li>
+    <li>Perform the daring tasks and pocket the Goodies and cash $$$$$$......</li>
+</ul>
+<div><a href="http://corona.nitp.ac.in/Corona16/downloads/INFERNO.pdf" target="_blank">Click here</a> to download questionnaire.</div>                </div>
+            </div>
+			
+            <div id="fun_streets" class="fun_pal" style="display: block; width: 253px; padding-top: 64px; top: 44px; cursor: pointer; transform: rotate(-90deg); height: 45px;">
+                STREETS
+                <div class="morefundetails" style="display: none;">
+                    For all those who are ready to shake a leg on the dance floor and drive the crowd crazier
+&amp; frenzier by, their 'BAARATI THUMKA'........here's an opportunity to put the dance floor
+on fire and WIN !!! <br><br>
+Just make the crowd go yelling at the top of your voices for you......!!!                </div>
+            </div>
+            
+            <div id="fun_cricket" class="fun_pal" style="display: block; width: 253px; padding-top: 64px; top: 44px; cursor: pointer; transform: rotate(-90deg); height: 45px;">
+                GULLY CRICKET
+                <div class="morefundetails" style="display: none;">
+                    <ul>
+    <li>Maximum players per side-5</li>
+    <li>Maximum over per side-5</li>
+    <li>Knock out rule(once the team gets eliminated,re- entry not applicable).</li>
+    <li>Gully cricket is for all years.</li>
+    <li>Sixes are not allowed.</li>
+    <li>Umpire's decision is last.No further arguments
+      are allowed.</li>
+    <li>If any conflicts occurs,final decision will be of authority.</li>
+    <li>One drop one hand is out.</li>
+    <li>All the other rules of cricket are valid.</li>
+</ul>
+<h3>Prize Money:</h3>
+WINNER-Rs.1000<br>
+Runner up-Rs.500<br><br>
+For further details <br>
+SAWAI SINGH MEENA<br>
+(EVENT CO-ORDINATOR)<br>
+(7050235250)<br><br>
+NIKHIL RAJ <br>
+(7759946042)
+                </div>
+            </div>
+	
+			<div id="fun_paper" class="fun_pal" style="display: block; width: 253px; padding-top: 64px; top: 44px; cursor: pointer; transform: rotate(-90deg); height: 45px;">
+                Paper Dance
+                <div class="morefundetails" style="display: none;">
+                    <ul>
+    <li>Can you dance like no one is watching?</li>
+    <li>Do you dare to balance yourself 
+	on your toes and still be able to groove to the tantalizing music?</li>
+    <li>The rules are pretty simple. Form a team of two and come to the arena.
+	Step on to a newspaper and dance!</li>
+    <li>But here's the catch; Keep your feet inside the boundaries of the paper!
+	What's more, the paper will be folded into half as the dance proceeds.
+	If you manage to stay on the paper till the end you get to win the prize.</li>
+</ul>
+For further details <br>
+NIKHIL RAJ <br>
+(7759946042)
+                </div>
+            </div>
+			<!--
+			<div id="fun_flash" class="fun_pal">
+                COKE STUDIO NIGHT
+                <div class="morefundetails">
+                    <img src="./images/cokenight.jpg" align="center" width="800px" height="350px" style="margin-left:200px"/>
+<p>Our college has come up to host something grand and awesome in collaboration with the Coke Studio as the highly awaited and fabulous “Coke Studio Night”, the exhilarating grand finale of our Techno-Cultural fest. A spectacle to be received with bated breath and an enthusiastic uproar; undoubtedly an event with rhapsody and a rendezvous with the crest of entertainment and musical aspiration. Certainly, it is bound to be a memory etching and pleasing experience for one and all. An event to be dazzled with the scintillating performances of our very own flamboyant Tia Kar, the India Idol 5 finalist, the celestial and notable Antariksh Band and last but certainly not least the incredible DJ Teddy from South Africa.</p>
+<p>Tia kar was the finalist in the top singing reality show Indian Idol 5. A versatile and talented singer, the young damsel is all set to take over the world with her melodious voice and dynamic performances. She has done a lot of successful live shows and projects including her performance in the popular TV soap “Yeh Hai Aashiqui” in channel V, Playback singing, Movies and Music Videos where her latest music video is “JIYA RE with Farid Ahmed from Sa Re Ga Ma Pa challenge 2008” & also she was in MOVERS AND SHEKHARS as Co-Host with Shekhar Suman on SAB TV and also was in 'Bindass Video Wars' after her stint in the reality show. She came across as one of the most popular contestants bagging the maximum number of votes to get into the galas. She was often called the Princess of emotions by the hosts because of her emotional nature. She was one of the favourite contestants of Anu Malik who saw her as a complete package, who can sing and perform. She is the only Indian performer to perform in Asian TV competition (ASIAN WAVE) in Shanghai on 21st August 2012 and the only performer who was asked to represent India on the International stage. Her sublime personality and charm has mesmerised the audience all over the world and she continues to keep them spellbound with soul-stirring voice.   </p> 
+<p>The Antariksh band as the name suggests is nothing but a bunch of stars rhythmically detached from a gleaming constellation to mesmerize us. Antariksh, a New Delhi based Hindi Rock band is the first of its kind. Founded by band members with backgrounds ranging from IIT to DCE to NSIT, McKinsey to CEB to Sapient, who have previously played for bands such Prestorika, Decibel, and Under Siege, the band brings together the perspectives from both corporate as well as creative spheres of life into their music. The band performed alongside var ious eminent personalities including Farhan Akhtar, Gul Panag, Leander Paes, Arvind Kejriwal, Virat Kohli, at India Today's Youth Summit, 'Mindrocks' . Recently, the band was also invited to speak and play at a Tedx event .Their very first single, 'Dheere Dheere' released in 2013 was selected in the top 5 songs in VIMA India awards, and was nominated for VIMA Asia Awards. Creating a potpourri of fresh music it is certain to fire the youthful fervour with a delightful hilt and play a splendid show.  </p>
+<p>We also have the international DJ Teddy from South Africa, to make us groove to nothing but the best. The music DJ Teddy works with represents his eclectic tastes. He enjoys mixing Pop, Hip Hop, Dance, Country, Old School, Raggae, Dancehall, Latin, Afro-Caribbean and African tunes. He also has equipment for MCd/DJd Karoke events. A splendid thread to seal the mesmerizing finale, DJ teddy is certainly going to even make the non-dancers go upbeat. </p>
+<p>So get ready to get swayed to a mystical world as the stage is all set for a magnificent Final showdown of Annual Techno-cultural fest.</p>
+                </div>
+            </div>
+			
+            <div id="fun_livecs" class="fun_pal">
+                AIR SHOW
+                <div class="morefundetails">
+                    <p>Adding a new twist and unique flavour this edition, we are having an awe-inspiring and charismatic air show by  Sonu kumar, 
+a third year Electrical Eng. student from JECRC University, Jaipur running a club(Incredible Aryans), which is multifunctional
+club including Aero-dynamics, Lunar rover as well as Robotics. As nitpians always believe in motivating budding technocrats
+and are always enthusiastic to push them at the threshold of success, here we bring a fresh star from the new India’s brigade
+to showcase his enormous flair. Needless to say this guy has won many laurels including events in BITS PILANI(2nd position),
+IIT KGP(4th position, IIT Mumbai, IIT kanpur and also competed at NASA's research center MDRS(Mars desert research station),
+USA competition which was related with lunar rover that NASA is going to launch their project in 2017.</p><p>
+ A promising event of technical competence and wonder, hope that this event will came out as a cherishing experience,
+ all set to mesmerize everyone and inspire many to do something out of box to flaunt their achievements with panache.
+ As the air show would glide the heights of our imagination, let so our aspirations and zeal, exuding nothing but the best fervour. 
+</p>
+                </div>
+				
+            </div>
+			-->
+        </div>
+</div>
+
+            </div>
+            <div class="slidepane" id="contactus">
+                   <div class="divpallete" style="width: 1348px;">
+    <div class="palletecontent">
+        <h1>CORONA team 2016</h1>
+        <div id="contactdetail">
+        <table border="0">
+            <tbody><tr>
+                <td style="border:none;box-shadow: none"></td>
+                <td>
+                <div class="text1">Dean(Student Welfare)</div>
+                <div><img src="./CORONA_files/skverma.jpg"></div>
+                <div class="text2">S K Verma</div>
+                <div class="text2">skverma@nitp.ac.in</div>
+                </td>
+                <td>
+                <div class="text1">President</div>
+                <div><img src="./CORONA_files/mandal_sir.png"></div>
+                <div class="text2">Dr. S. K. Mandal</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+           <!--     <td>
+                <div class="text1">Vice-President</div>
+                <div><img src="./images/contact/unnamed.png"></div>
+                <div class="text2">&nbsp;</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+				-->
+                <td style="border:none;box-shadow: none"></td>
+            </tr>
+			
+			<tr>
+                <td>
+               <div class="text1">Student Coordinator</div>
+                <div><img src="./CORONA_files/praveen_sir.jpg"></div>
+                <div class="text2">Praveen Kumar Upadhyay</div>
+                <div class="text3">+917739696621</div>
+                <div class="text2">praveen.upadhyay246@gmail.com</div>
+               </td>
+                <td>
+                <div class="text1">Stage Coordinator</div>
+                <div><img src="./CORONA_files/vivek_sir.jpg"></div>
+                <div class="text2">Vivek Pandey</div>
+                <div class="text3">+918804194291</div>
+                <div class="text2">pandeyvivek1993@gmail.com</div>
+                </td>
+                <td>                       
+                <div class="text1">Media Coordinator</div>
+                <div><img src="./CORONA_files/himanshu_sir.jpg"></div>
+                <div class="text2">Himanshu Nigam</div>
+                <div class="text3">8578915666</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+                <td>
+                <div class="text1">Yantriki Coordinator</div>
+                <div><img src="./CORONA_files/kavish_sir.jpg"></div>
+                <div class="text2">Kavish Narang</div>
+                <div class="text3">9456464564</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+                <td>
+                <div class="text1">Ohm Coordinator</div>
+                <div><img src="./CORONA_files/ashwani_sir.jpg"></div>
+                <div class="text2">Ashwani Kumar Pathak</div>
+                <div class="text2">9801410754</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+            </tr>
+           
+           
+           <tr>
+                <td>
+               <div class="text1">Concrete Coordinator</div>
+                <div><img src="./CORONA_files/rajat_sir.jpg"></div>
+                <div class="text2">Rajat Rai</div>
+                <div class="text3">+918102485627</div>
+                <div class="text2">&nbsp;</div>
+               </td>
+                <td>
+                <div class="text1">Byte World Coordinator</div>
+                <div><img src="./CORONA_files/abhishek_sir.jpg"></div>
+                <div class="text2">Abhisek Prakash</div>
+                <div class="text3">+919472050873</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+                <td>                       
+                <div class="text1">Aayam Coordinator</div>
+                <div><img src="./CORONA_files/umang_sir.jpg"></div>
+                <div class="text2">Umang Bandooni</div>
+                <div class="text3">9013038729</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+                <td>
+                <div class="text1">Fun Event Coordinator</div>
+                <div><img src="./CORONA_files/sawai_sir.jpg"></div>
+                <div class="text2">Sawai Singh Meena</div>
+                <div class="text3">7050235250</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+              <!--  <td>
+                <div class="text1">Ohm Coordinator</div>
+                <div><img src="./images/contact/ashwani_sir.png"></div>
+                <div class="text2">Ashwani Kumar Pathak</div>
+                <div class="text2">9801410754</div>
+                <div class="text2">&nbsp;</div>
+                </td>
+				-->
+            </tr>
+		   
+		   
+		   
+		   
+		   
+           
+        </tbody></table>
+        </div>
+    </div>
+</div>
+            </div>
+           </strong></strong></div><strong><strong>
+           </strong></strong></div><strong><strong>
+            
+            <div id="abt_coro" class="new_wind">
+                <h2>About us</h2>
+                <p>The fact there is lot more to engineering than just formulae and 
+                theories is being forgotten in the country . To keep to the long
+                history and heritage of NIT Patna Corona 16 the annual techno 
+                management fest is all geared up to take it to the next level. 
+                Corona is the spirit that shows the budding engineers   
+                new path , a path that will utilize indigenous thinking 
+                and creativity for the benefit of the nation and the human
+                race it self and moulds them as the managers of the future. 
+                </p>
+                <p>Corona (22-27 Jan, 2016)  gives its participants and unforgettable experience
+                    and priceless knowledge   of the guest lectures by one the elite
+                    minds of the nation , competitive events for all the branches , 
+                    main attraction are the robotics events attracting participants
+                    from all corners of the nation , workshops , art exhibitions and many fun events.<br>
+                    Mail us at coronanitpatna@gmail.com
+                </p>
+            </div>
+            <div id="gallery" class="new_wind">
+            </div>
+            <div id="login" class="new_wind">
+                <script>
+    $(document).ready(function()
+    {
+        
+        $("#logform").submit(function(e){
+            e.preventDefault();
+            $("#l_load").show();
+            var lname=$("#lname").val();
+            var lpwd=$("#lpwd").val();
+            var data_send={ 
+                            lname:lname,
+                            lpwd:lpwd
+                        };
+                            $.ajax({
+                        url:'./php/signin.php',
+                        type:'POST',
+                        data:data_send,
+                        success: function(data_recieve){
+                                if(data_recieve==1)
+                                {
+                                    $(".new_wind").hide();
+                                    $("#profile").css({"background-size":"1224px 592px"});
+                                    $("#profile").animate({top:"40px",left:"60px",width:"1000px",height:"508px"},300);
+                                    $("#profile").show();
+                                    $("#profile").load('./php/profile.php');
+                                    $("#close_wind").css({"top":"80px","left":"1200px"});
+                                    $("#l_load").hide();
+                                }
+                            else
+                                    $("#l_status").text('Invald username or password. Try again !');
+                                }
+                        
+                        })
+        });
+    });
+</script>
+<form id="logform">
+    
+            You can't login now!
+        <table cellpadding="20">
+        <tbody></tbody>
+    </table>
+</form>
+<center id="l_status"></center>
+<div id="l_load" style="display: none"><img src="./CORONA_files/loading.gif" alt="load"></div>
+            </div>
+            <div id="signup" class="new_wind">
+                <script>
+    $(document).ready(function()
+    {
+        $('#srpwd').keyup(function(){
+            var spwd=$("#spwd").val();
+            var srpwd=$("#srpwd").val();
+            dntmat=1;
+            if(spwd!=srpwd)
+                {
+                    $("#passnotmat").show();
+                    dntmat=1;
+                }
+            else
+                {
+                    $("#passnotmat").hide();
+                    dntmat=0;
+                }
+                    
+        });
+        $("#regform").submit(function(e){
+            $("#s_load").show();
+            e.preventDefault();
+            if(dntmat==0)
+                {
+                    var sname=$("#sname").val();
+                    var scname=$("#scname").val();
+                    var sroll=$("#sroll").val();
+                    if($('#smgender').is(':checked'))
+                        var sgender='M';
+                    else
+                        var sgender='F';
+                    var sprog=$("#sprog").val();
+                    var sbranch=$("#sbranch").val();
+                    var spwd=$("#spwd").val();
+                    var srpwd=$("#srpwd").val();
+                    var smobile=$("#smobile").val();
+                    var semail=$("#semail").val();
+                        $.ajax({
+                        url:'./php/register.php',
+                        type:'POST',
+                        data:'semail='+semail+'&spwd='+spwd+'&sname='+sname+'&scname='+scname+'&smobile='+smobile+'&sbranch='+sbranch+
+                                '&sroll='+sroll+'&sgender='+sgender+'&sprog='+sprog,
+                        success: function(data){
+                                $("#s_status").text(data);
+                                $("#s_load").hide();
+                                }
+                        
+                        })
+                }
+            else
+            {
+                $("#passnotmat").show();
+            }
+        });
+    });
+</script>
+Registrations for corona 2015 stopped            </div>
+            <div id="profile" class="new_wind">
+            </div>
+            <div id="webteam" class="new_wind">
+                <center style="font-size: 22px;">CORONA Web Team 2016</center>
+<br><br>
+<div>
+
+    <table align="center" style="font-size: 16px">
+    <tbody><tr>
+                <td style="width:220px">
+                <div><img src="./CORONA_files/mayank.png" width="150" height="177"></div>
+                <div style="font-size: 19px">Mayank Raj</div>
+                <div>CSE, final year</div>
+                <div style="font-size: 19px">+917870881474</div>
+                </td>
+                <td style="width:220px">
+                <div><img src="./CORONA_files/saurav.png" width="150" height="177"></div>
+                <div style="font-size: 19px">Saurav Shanu</div>
+                <div>CSE, final year</div>
+                <div style="font-size: 19px">+917739305893</div>
+                </td> 
+    </tr>
+</tbody></table>
+</div>            </div>
+            <div id="close_wind">X</div>
+            <div id="footer" class="shine" style="display: block; bottom: -450px;">
+                <ul>
+                    <li id="foot1" style="display: list-item;">About us</li>
+                    <li id="foot2" style="display: list-item;">Gallery</li>
+                    <li id="foot3" style="display: list-item;">© Corona Web Team 2016</li>
+                    <li id="foot4" style="display: list-item;"><a style="text-decoration: none; color: inherit;" href="http://nitp.ac.in/php/howtoreach.php" target="_blank">How to Reach</a></li>
+                    <li style="font-size: 13px; display: list-item;" id="foot5">Hosted on NITP Infrastructure</li>
+                </ul>
+            </div>
+        </strong></strong></div><strong><strong>
+        <div id="black"></div>
+    
+
+</strong></strong></body></html>
